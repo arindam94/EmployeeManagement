@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  CityWeather
+
+  Created by Rohit Ragmahale on 31/05/2023.
+  
+*/
+
+//// Search Weather
+//"searchWeatherTitle" = "City Weather";
+//"searchWeatherSearchTitle" = "Search";
+//"searchWeatherEnterCity" = "Enter name of the city";
+//"error" = "Error";
+//"okTitle" = "Ok";
+//
+//"temperatureDetails" = "Temperature: %@ Celsius";
+//"humidityDetails" = "Humidity: %@";
+
+// Error Messages
+
+"errorRemoteDataParsingFailed" = "Employee  data not found.";
+"errorInvalidEndPoint" = "Endpoint is not valid.";
+"errorUnknown" = "Unknown error occured.\nPlease try again.";
+
+
