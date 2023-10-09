@@ -8,17 +8,22 @@
 import Foundation
 
 final class DataStore{
-    private var data: [EmployeeData] = []
+    private var data: [EmployeeInfo] = []
     
 }
 
 
 extension DataStore: Dataprovider{
-    var employeeDateList: [EmployeeData] {
+    func addEmployeedata(dataValue: EmployeeData) {
+        guard let users = dataValue.users else{return}
+        self.data = users
+    }
+    
+    var employeeDataList: [EmployeeInfo] {
         data
     }
     
-    func employeeDataAt(index: Int) -> EmployeeData? {
+    func employeeDataAt(index: Int) -> EmployeeInfo? {
         return data[index]
     }
     

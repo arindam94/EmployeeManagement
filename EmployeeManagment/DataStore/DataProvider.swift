@@ -8,7 +8,7 @@
 import Foundation
 
 protocol Dataprovider{
-    var employeeDateList:[EmployeeData]{get}
-    func employeeDataAt(index: Int)-> EmployeeData?
-    
+    var employeeDataList:[EmployeeInfo]{get}
+    func employeeDataAt(index: Int)-> EmployeeInfo?
+    func addEmployeedata(dataValue: EmployeeData)
 }

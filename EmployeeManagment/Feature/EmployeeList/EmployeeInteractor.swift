@@ -14,10 +14,10 @@ protocol EmployeeListInteractor{
 
 struct EmployeeInteractor{
     private let service: EmployeeService
-    private let presentter: EmployeePresenter
+    private let presentter: EmployeePresenterInterface
     private let datsStore: Dataprovider
     
-    init(service: EmployeeService, presentter: EmployeePresenter, datsStore: Dataprovider) {
+    init(service: EmployeeService, presentter: EmployeePresenterInterface, datsStore: Dataprovider) {
         self.service = service
         self.presentter = presentter
         self.datsStore = datsStore
@@ -28,8 +28,10 @@ extension EmployeeInteractor: EmployeeListInteractor{
     func getListofEmployee() {
         Task{
             do{
-                let listData =  try await service.fetchEmployeeData()
-                presentter.employeeListUpdate(list: listData!)
+                if  let listData =  try await service.fetchEmployeeData(){
+                    datsStore.addEmployeedata(dataValue: listData)
+                    presentter.employeeListUpdate(list: listData)
+                }
             }
             catch let error as ResponseError {
                 presentter.employeeRequestFailed(description: error.errorDescription)

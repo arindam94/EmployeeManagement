@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EmployeeInfo: Codable{
+struct EmployeeInfo: Codable, Hashable{
     let id: Int?
     let firstName: String?
     let lastName: String?

@@ -22,6 +22,7 @@ final class EmployeeService: EmployeeServiceProvider{
             httpClient.loadData(networkRequest: request).sink { completion in
                 switch completion{
                 case .failure(let error):
+                    debugPrint(error)
                     continuation.resume(throwing: error)
                 case .finished: break
                     

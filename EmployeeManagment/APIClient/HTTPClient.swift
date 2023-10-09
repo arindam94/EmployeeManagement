@@ -20,11 +20,6 @@ struct HTTPClient{
 
 
 extension HTTPClient: HttpsClientInterface{
-    
-    
-    
-    
-    
     func loadData<T>(networkRequest: NetworkRequest<T>) -> AnyPublisher<T, ResponseError> where T : Decodable {
         guard let request = networkRequest.request else{
             return Fail(error: ResponseError.invalidURL).eraseToAnyPublisher()
