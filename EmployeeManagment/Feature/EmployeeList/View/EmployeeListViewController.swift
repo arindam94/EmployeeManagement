@@ -12,21 +12,25 @@ protocol EmployeeListViewInterface: AnyObject{
     func showError(errorMessage: String)
 }
 
-class EmployeeListViewController: UIViewController {
+final class EmployeeListViewController: UIViewController {
 
+    @IBOutlet weak var employeeTable: UITableView!
     var interactor: EmployeeListInteractor?
-    @IBOutlet var employeeTable: UITableView!
+
     var employeeData: [EmployeeInfo] = []
     
     override func viewDidLoad()  {
         super.viewDidLoad()
-        interactor?.getListofEmployee()
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        interactor?.getListofEmployee()
+    }
+    
     fileprivate func setupUI(){
-        employeeTable.dataSource = self
-        employeeTable.delegate = self
+        employeeTable.accessibilityIdentifier = "myTableViewIdentifier"
         EmployeeListCell.registerCellWithTableView(tablView: employeeTable)
     }
 

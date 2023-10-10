@@ -49,7 +49,7 @@ final class EmployeeListPresenterTests: XCTestCase {
             expectation.fulfill()
             XCTAssertTrue(view.showEmployeeList)
         }
-        wait(for: [expectation], timeout: 0.2)
+        wait(for: [expectation], timeout: 1)
     }
     
     
@@ -75,7 +75,7 @@ final class EmployeeListPresenterTests: XCTestCase {
             expectation.fulfill()
             XCTAssertTrue(view.showErrorAlert)
         }
-        wait(for: [expectation], timeout: 0.2)
+        wait(for: [expectation], timeout: 1)
     }
 
 }

@@ -9,18 +9,24 @@ import UIKit
 
 class EmployeeListCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var profileImageView: UIImageView!
     
     var employeeDetails: EmployeeInfo?{
         didSet{
             guard let employeeDetails = employeeDetails else{
                 return
             }
-            profileImageView.load(url: URL(string: employeeDetails.image ?? "")!)
-            nameLabel.text = employeeDetails.firstName ?? ""
+            if let url = URL(string: employeeDetails.image ?? ""){
+                profileImageView.load(url: url)
+            }
+            nameLabel.text = "\(employeeDetails.firstName ?? "") \(employeeDetails.maidenName ?? "") \(employeeDetails.lastName ?? "")"
         }
     }
+    
+
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

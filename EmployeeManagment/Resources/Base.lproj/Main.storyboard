@@ -15,10 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="BYZ-38-t0r" id="9TS-Uq-DAZ"/>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="07O-Az-DYa"/>
+                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Employee" id="3Bv-lQ-8Pj"/>
                     <connections>
-                        <outlet property="employeeTable" destination="QuL-3M-fOp" id="3FM-vr-jJz"/>
+                        <outlet property="employeeTable" destination="QuL-3M-fOp" id="Tdf-t0-KCd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
