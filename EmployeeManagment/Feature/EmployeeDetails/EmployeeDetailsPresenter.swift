@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+//MARK: - EmployeeDeatilsPresenter Protocol
 protocol EmployeeDetailsPresenterInterface{
     func updateEmployeeDetails()
 }
@@ -25,6 +25,7 @@ struct EmployeeDetailsPresenter{
 
 }
 
+//MARK: - EmployeeDeatilsPresenter Protocol Implementation
 extension EmployeeDetailsPresenter: EmployeeDetailsPresenterInterface{
     func updateEmployeeDetails() {
         view?.showEmployeeDetails(info: employeeDetails)

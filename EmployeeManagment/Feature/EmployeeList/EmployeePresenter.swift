@@ -7,6 +7,7 @@
 
 import Foundation
 
+//MARK: Employee Presenter protocol
 protocol EmployeePresenterInterface{
     func employeeListUpdate(list: EmployeeData)
     func employeeRequestFailed(description: String)
@@ -22,6 +23,7 @@ struct EmployeePresenter{
     }
 }
 
+//MARK: Implementation of Employee Presenter protocol.
 extension EmployeePresenter: EmployeePresenterInterface{
     func showEmployeeDetails(info: EmployeeInfo) {
         DispatchQueue.main.async {

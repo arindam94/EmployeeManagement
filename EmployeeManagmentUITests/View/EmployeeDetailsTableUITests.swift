@@ -18,5 +18,15 @@ final class EmployeeDetailsTableUITests: XCTestCase {
     }
 
     
+    func testTableViewCellExists() {
+        let app = XCUIApplication()
+                app.launch() 
+        
+        let tableView = app.tables["myTableViewIdentifier"]
+        let cell = tableView.cells.element(boundBy: 0)
+        cell.tap()
+        let detailsTableView = app.tables["myDetailsTableViewIdentifier"]
+        XCTAssertTrue(detailsTableView.exists, "The table view doesn't exist")
 
+    }
 }

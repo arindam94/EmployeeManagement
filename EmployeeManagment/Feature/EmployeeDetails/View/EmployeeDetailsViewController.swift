@@ -12,15 +12,14 @@ protocol EmployeeDetailsViewInterface: AnyObject{
 }
 
 class EmployeeDetailsViewController: UIViewController {
-    @IBOutlet weak var employeeDetailsTableView: UITableView!
+    @IBOutlet weak private var employeeDetailsTableView: UITableView!
     
-//    var prersenter: EmployeeDetailsPresenterInterface?
      var employeeData: EmployeeInfo?
     var interactor: EmployeeDetailsInteractorInterface?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,8 +32,8 @@ class EmployeeDetailsViewController: UIViewController {
         employeeDetailsTableView.delegate = self
         EmployeeDetailsCell.registerCellWithTableView(tablView: employeeDetailsTableView)
         employeeDetailsTableView.accessibilityIdentifier = "myDetailsTableViewIdentifier"
-
     }
+    
 }
 
 extension EmployeeDetailsViewController: EmployeeDetailsViewInterface, UITableViewDataSource, UITableViewDelegate{

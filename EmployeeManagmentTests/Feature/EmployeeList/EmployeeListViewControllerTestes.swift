@@ -52,10 +52,16 @@ final class EmployeeListViewControllerTestes: FBSnapshotTestCase {
         viewController.interactor = interactor
         
         //When
-        viewController.viewWillAppear(true)
+        viewController.viewDidLoad()
         
         //then
-        XCTAssertTrue(interactor.employeeListDataExecuted)
+        let expectation = expectation(description: "Employeelist viewController")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            expectation.fulfill()
+            XCTAssertTrue(interactor.employeeListDataExecuted)
+        }
+        wait(for: [expectation], timeout: 2.0)
+
     }
     
     

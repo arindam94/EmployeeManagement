@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+//MARK: Extension for imageview . For loading image from URL
 extension UIImageView {
    func load(url: URL) {
         DispatchQueue.global().async { [weak self] in

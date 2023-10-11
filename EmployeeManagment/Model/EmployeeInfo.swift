@@ -7,6 +7,7 @@
 
 import Foundation
 
+//MARK: EmployeeInfo Model
 struct EmployeeInfo: Codable, Hashable{
     let id: Int?
     let firstName: String?

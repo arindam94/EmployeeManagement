@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 struct EmployeeDetailsConfigurator{
-//    private let service: EmployeeService
     private let employeeDetails: EmployeeInfo?
     
     init(employeeDetails: EmployeeInfo) {
@@ -20,18 +19,10 @@ struct EmployeeDetailsConfigurator{
 extension EmployeeDetailsConfigurator: Configurator{
     func configureViewController() -> UIViewController {
         let viewController: EmployeeDetailsViewController = UIStoryboard.instantiate(identifier: .employeeDetails)
-        
         let router = EmployeeDetailsRouter(viewController: viewController)
-        
         let  presenter =  EmployeeDetailsPresenter(router: router, view: viewController, employeeDetails: employeeDetails!)
-
         let interactor = EmployeeDetailsInteractor(presenter: presenter)
-        
         viewController.interactor = interactor
-        
         return viewController
     }
-    
-    
-    
 }

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 
+//MARK: UIStoryboard extension for instantiate viewController by using identifier
 extension UIStoryboard{
     static func instantiate<T: UIViewController>(identifier: StoryboardIdentifier)-> T{
         let storyBoard = UIStoryboard(name: identifier.storyboardName, bundle: nil)

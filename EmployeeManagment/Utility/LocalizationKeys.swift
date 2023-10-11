@@ -11,6 +11,7 @@ protocol  Localized{
     var localized: String{get}
 }
 
+//MARK: Application Localization keys
 enum EmployeeApp: String, Localized{
     case errorDateParsingFailed
     case errorInvalidEndPoint

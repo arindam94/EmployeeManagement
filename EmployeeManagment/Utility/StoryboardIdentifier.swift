@@ -7,11 +7,12 @@
 
 import Foundation
 
+//MARK: Storyboard Name
 enum Storyboard: String{
     case main = "Main"
 }
 
-
+//MARK: Enum for storyboard identifier
 enum StoryboardIdentifier: String{
     case employeeList
     case employeeDetails

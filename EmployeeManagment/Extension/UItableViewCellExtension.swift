@@ -7,6 +7,7 @@
 
 import UIKit
 
+//MARK: Cell Extension for registering cell
 extension UITableViewCell{
     static func registerCellWithTableView(tablView: UITableView){
         let nibName = String(describing: Self.self)

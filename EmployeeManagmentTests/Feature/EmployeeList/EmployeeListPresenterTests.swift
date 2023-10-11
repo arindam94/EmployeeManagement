@@ -8,21 +8,25 @@
 import XCTest
 @testable import EmployeeManagment
 
- class MockEmployeeListViewController:EmployeeListViewInterface{
+final  class MockEmployeeListViewController:EmployeeListViewInterface{
     var showErrorAlert: Bool = false
     var showEmployeeList: Bool = false
     
     func showListOfEmployee(list: EmployeeData) {
-        
         showEmployeeList = true
     }
     
     func showError(errorMessage: String) {
         showErrorAlert = true
     }
-    
 }
 
+final class MockEmployeeListRouter: EmployeeListRouting{
+    var showEmployeeDetailsExecuted: Bool = false
+    func showEmployeeDetails(employeeData: EmployeeManagment.EmployeeInfo) {
+        showEmployeeDetailsExecuted = true
+    }
+}
 
 
 
@@ -31,7 +35,7 @@ final class EmployeeListPresenterTests: XCTestCase {
     func testEmployeeListPresenter() {
         //given
         let view = MockEmployeeListViewController()
-        let router = EmployeeRouter(viewController: UIViewController())
+        let router = MockEmployeeListRouter()
         let presenter = EmployeePresenter(view: view, router: router)
         
         
@@ -57,7 +61,7 @@ final class EmployeeListPresenterTests: XCTestCase {
     func testEmployeeListPresenterWithError() {
         //given
         let view = MockEmployeeListViewController()
-        let router = EmployeeRouter(viewController: UIViewController())
+        let router = MockEmployeeListRouter()
         let presenter = EmployeePresenter(view: view, router: router)
         
         
@@ -70,6 +74,31 @@ final class EmployeeListPresenterTests: XCTestCase {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             expectation.fulfill()
             XCTAssertTrue(view.showErrorAlert)
+        }
+        wait(for: [expectation], timeout: 1)
+    }
+    
+    
+    func testEmployeeListPresenterShowEmployeeDetails() {
+        //given
+        let view = MockEmployeeListViewController()
+        let router = MockEmployeeListRouter()
+        let presenter = EmployeePresenter(view: view, router: router)
+        
+        
+        //when
+        guard let mockEMployeeData = MockDataProvider.getEmployeeData()?.users?.first else{
+            XCTFail("Failed to provide data")
+            return
+        }
+        presenter.showEmployeeDetails(info: mockEMployeeData)
+        
+        
+        //Then
+        let expectation = expectation(description: "testEmployeePresenter")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            expectation.fulfill()
+            XCTAssertTrue(router.showEmployeeDetailsExecuted)
         }
         wait(for: [expectation], timeout: 1)
     }

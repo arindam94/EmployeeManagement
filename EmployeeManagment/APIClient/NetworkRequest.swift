@@ -7,7 +7,7 @@
 
 import Foundation
 
-//Mark: Network Request
+//Mark: -Network Request
 
 struct NetworkRequest<T: Decodable>{
     
@@ -38,6 +38,7 @@ struct NetworkRequest<T: Decodable>{
     
 }
 
+//MARK: - Helper for network request
 extension NetworkRequest{
     static func employeeDataRequest()-> NetworkRequest<EmployeeData>{
         let url = EmployeeAPIConstants.baseURL + EmployeeAPIConstants.userListService

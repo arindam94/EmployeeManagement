@@ -8,10 +8,7 @@
 import Foundation
 import Combine
 
-
-
-
-
+//MARK: - Mock HTTP client for Unit testing
 struct MockHTPClient: HttpsClientInterface{
     func loadData<T>(networkRequest: NetworkRequest<T>) -> AnyPublisher<T, ResponseError> where T : Decodable {
         let data = try? TestUtils.dataValue(fromResource: "EmployeeDataRespone", ext: "json")

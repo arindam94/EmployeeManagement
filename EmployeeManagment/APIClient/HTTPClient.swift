@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+//MARK: - HTTP client interface
 protocol HttpsClientInterface{
     func loadData<T: Decodable>(networkRequest: NetworkRequest<T>) -> AnyPublisher<T, ResponseError>
 }
@@ -41,6 +42,5 @@ extension HTTPClient: HttpsClientInterface{
                 }
             }.eraseToAnyPublisher()
     }
-    
     
 }

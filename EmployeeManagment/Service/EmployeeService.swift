@@ -7,15 +7,24 @@
 
 import Foundation
 import Combine
+
+//MARK: - Employee Service protocol
 protocol EmployeeServiceProvider{
     func fetchEmployeeData() async throws -> EmployeeData?
 }
 
 
-final class EmployeeService: EmployeeServiceProvider{
+final class EmployeeService{
     private let httpClient: HttpsClientInterface
     private var cancellables: [AnyCancellable] = []
     
+    init(httpClient: HttpsClientInterface) {
+        self.httpClient = httpClient
+    }
+}
+
+//MARK: - Employee Service protocol Implementation
+extension EmployeeService: EmployeeServiceProvider{
     func fetchEmployeeData() async throws -> EmployeeData? {
         let request = NetworkRequest<EmployeeData>.employeeDataRequest()
         return try await withCheckedThrowingContinuation { continuation in
@@ -34,12 +43,5 @@ final class EmployeeService: EmployeeServiceProvider{
 
         }
     }
-    
-    init(httpClient: HttpsClientInterface) {
-        self.httpClient = httpClient
-    }
-    
-  
-    
 }
 
