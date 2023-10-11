@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct EmployeeDetailsConfigurator{
+struct EmployeeDetailsConfigurator {
     private let employeeDetails: EmployeeInfo?
     
     init(employeeDetails: EmployeeInfo) {
@@ -16,7 +16,7 @@ struct EmployeeDetailsConfigurator{
     }
 }
 
-extension EmployeeDetailsConfigurator: Configurator{
+extension EmployeeDetailsConfigurator: Configurator {
     func configureViewController() -> UIViewController {
         let viewController: EmployeeDetailsViewController = UIStoryboard.instantiate(identifier: .employeeDetails)
         let router = EmployeeDetailsRouter(viewController: viewController)

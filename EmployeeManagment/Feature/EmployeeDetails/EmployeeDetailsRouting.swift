@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-struct EmployeeDetailsRouter{
+struct EmployeeDetailsRouter {
     private weak var viewController: UIViewController?
     init(viewController: UIViewController? = nil) {
         self.viewController = viewController

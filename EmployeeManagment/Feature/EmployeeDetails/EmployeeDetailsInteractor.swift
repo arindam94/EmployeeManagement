@@ -8,11 +8,11 @@
 import Foundation
 
 // Known: For future use. keeping empty
-protocol EmployeeDetailsInteractorInterface{
-   func  showEmployeeData()
+protocol EmployeeDetailsInteractorInterface {
+    func  showEmployeeData()
 }
 
-struct EmployeeDetailsInteractor{
+struct EmployeeDetailsInteractor {
     private let presenter: EmployeeDetailsPresenterInterface
     init(presenter: EmployeeDetailsPresenterInterface) {
         self.presenter = presenter
@@ -20,7 +20,7 @@ struct EmployeeDetailsInteractor{
 }
 
 //MARK: Interface Implementation
-extension EmployeeDetailsInteractor: EmployeeDetailsInteractorInterface{
+extension EmployeeDetailsInteractor: EmployeeDetailsInteractorInterface {
     func showEmployeeData() {
         presenter.updateEmployeeDetails()
     }

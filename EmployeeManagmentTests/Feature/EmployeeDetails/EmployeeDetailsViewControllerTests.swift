@@ -10,7 +10,7 @@ import iOSSnapshotTestCase
 import iOSSnapshotTestCaseCore
 @testable import EmployeeManagment
 
-private final class  MockEmployeeDetailsInteractor: EmployeeDetailsInteractorInterface{
+private final class  MockEmployeeDetailsInteractor: EmployeeDetailsInteractorInterface {
     var showEmployeeDataExecuted = false
     func showEmployeeData() {
         showEmployeeDataExecuted = true
@@ -23,19 +23,19 @@ final class EmployeeDetailsViewControllerTests: FBSnapshotTestCase {
     var navigationController: UINavigationController!
     var sceneDelegate: SceneDelegate!
     
-  
+    
     
     override func setUp() {
         super.setUp()
-         recordMode = false
+        recordMode = false
     }
-
+    
     override func tearDownWithError() throws {
         employeeDetailsViewController     = nil
-         navigationController                  = nil
-         sceneDelegate                            = nil
+        navigationController                  = nil
+        sceneDelegate                            = nil
     }
-
+    
     func testEmployeeDataListViewControllerDataLoading(){
         //Given
         let viewController: EmployeeDetailsViewController = UIStoryboard.instantiate(identifier: .employeeDetails)
@@ -45,16 +45,14 @@ final class EmployeeDetailsViewControllerTests: FBSnapshotTestCase {
         //When
         viewController.viewWillAppear(true)
         
-        
         //then
         XCTAssertTrue(interactor.showEmployeeDataExecuted)
     }
     
     
     
-    func testEmployeeListViewControlleWithNoResult() throws{
+    func testEmployeeListViewControlleWithNoResult() throws {
         loadViewController()
-        
         let expectation = expectation(description: "Employeelist DetailsviewController")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
             expectation.fulfill()
@@ -63,8 +61,8 @@ final class EmployeeDetailsViewControllerTests: FBSnapshotTestCase {
         wait(for: [expectation], timeout: 2.0)
     }
     
-   
-    private func loadViewController(){
+    
+    private func loadViewController() {
         guard let employeeInfo = MockDataProvider.getEmployeeData()?.users?.first else{
             XCTFail("Unable to load data")
             return
@@ -74,7 +72,6 @@ final class EmployeeDetailsViewControllerTests: FBSnapshotTestCase {
             XCTFail("failed to load view controller")
             return
         }
-
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let sceneDelegate = windowScene.delegate as? SceneDelegate else{
             return
         }
@@ -83,7 +80,5 @@ final class EmployeeDetailsViewControllerTests: FBSnapshotTestCase {
         navigationController = UINavigationController(rootViewController: viewController)
         self.sceneDelegate.window?.rootViewController = navigationController
     }
-
-    
     
 }

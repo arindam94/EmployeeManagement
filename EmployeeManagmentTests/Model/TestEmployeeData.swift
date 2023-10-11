@@ -8,7 +8,7 @@
 import XCTest
 @testable import EmployeeManagment
 final class TestEmployeeData: XCTestCase {
-
+    
     func testEmployeeDataParsing(){
         do{
             //given
@@ -22,11 +22,10 @@ final class TestEmployeeData: XCTestCase {
             else{
                 XCTFail("Respone decoding failed")
             }
-
         }
         catch let error{
             XCTFail(error.localizedDescription)
-
+            
         }
     }
 }

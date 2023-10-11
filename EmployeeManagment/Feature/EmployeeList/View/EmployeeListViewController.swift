@@ -8,16 +8,16 @@
 import UIKit
 
 //Mark: - EmployeeListViewController Protocol
-protocol EmployeeListViewInterface: AnyObject{
+protocol EmployeeListViewInterface: AnyObject {
     func showListOfEmployee(list: EmployeeData)
     func showError(errorMessage: String)
 }
 
 final class EmployeeListViewController: UIViewController {
-
+    
     @IBOutlet weak private var employeeTable: UITableView!
     var interactor: EmployeeListInteractor?
-
+    
     var employeeData: [EmployeeInfo] = []
     
     override func viewDidLoad()  {
@@ -34,13 +34,13 @@ final class EmployeeListViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    fileprivate func setupUI(){
+    fileprivate func setupUI() {
         employeeTable.accessibilityIdentifier = "myTableViewIdentifier"
         EmployeeListCell.registerCellWithTableView(tablView: employeeTable)
     }
 }
 
-extension EmployeeListViewController: EmployeeListViewInterface, UITableViewDataSource, UITableViewDelegate{
+extension EmployeeListViewController: EmployeeListViewInterface, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.employeeData.count
@@ -62,8 +62,8 @@ extension EmployeeListViewController: EmployeeListViewInterface, UITableViewData
     
     //MARK: - Will provide datasource of employee , next reload table view
     func showListOfEmployee(list: EmployeeData) {
-            self.employeeData = list.users!
-            self.employeeTable.reloadData()
+        self.employeeData = list.users!
+        self.employeeTable.reloadData()
     }
     
     //MARK: - On fetching data from api any error , will show by error message
@@ -72,7 +72,5 @@ extension EmployeeListViewController: EmployeeListViewInterface, UITableViewData
         alert.addAction(UIAlertAction(title: EmployeeApp.ok.localized, style: .cancel))
         present(alert, animated: true)
     }
-    
-    
 }
 

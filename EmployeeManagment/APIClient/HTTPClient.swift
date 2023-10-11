@@ -9,18 +9,18 @@ import Foundation
 import Combine
 
 //MARK: - HTTP client interface
-protocol HttpsClientInterface{
+protocol HttpsClientInterface {
     func loadData<T: Decodable>(networkRequest: NetworkRequest<T>) -> AnyPublisher<T, ResponseError>
 }
 
-struct HTTPClient{
-    static func callHTTPClient()-> HttpsClientInterface{
+struct HTTPClient {
+    static func callHTTPClient()-> HttpsClientInterface {
         return HTTPClient()
     }
 }
 
 
-extension HTTPClient: HttpsClientInterface{
+extension HTTPClient: HttpsClientInterface {
     func loadData<T>(networkRequest: NetworkRequest<T>) -> AnyPublisher<T, ResponseError> where T : Decodable {
         guard let request = networkRequest.request else{
             return Fail(error: ResponseError.invalidURL).eraseToAnyPublisher()
@@ -38,9 +38,7 @@ extension HTTPClient: HttpsClientInterface{
                     return ResponseError.decode
                 default:
                     return ResponseError.unexpectedStatusCode
-
                 }
             }.eraseToAnyPublisher()
     }
-    
 }

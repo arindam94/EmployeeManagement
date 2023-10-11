@@ -8,7 +8,7 @@
 import Foundation
 
 //MARK: Data provider protocol
-protocol Dataprovider{
+protocol Dataprovider {
     var employeeDataList:[EmployeeInfo]{get}
     func employeeDataAt(index: Int)-> EmployeeInfo?
     func addEmployeedata(dataValue: EmployeeData)

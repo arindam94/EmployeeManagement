@@ -9,9 +9,9 @@ import XCTest
 @testable import EmployeeManagment
 
 final class EmployeeListConfigurationTests: XCTestCase {
-
     
-    func testEmployeeListConfiguration(){
+    
+    func testEmployeeListConfiguration() {
         //Given
         let datsource = DataStore()
         let service = EmployeeService(httpClient: MockHTPClient())

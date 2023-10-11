@@ -7,21 +7,18 @@
 
 import Foundation
 
-protocol  Localized{
-    var localized: String{get}
+protocol  Localized {
+    var localized: String {get}
 }
 
 //MARK: Application Localization keys
-enum EmployeeApp: String, Localized{
+enum EmployeeApp: String, Localized {
     case errorDateParsingFailed
     case errorInvalidEndPoint
     case errorUnknownError
-
     case error
     case ok
-    var localized: String{
+    var localized: String {
         return rawValue.localized
     }
-    
-    
 }

@@ -8,17 +8,17 @@
 import Foundation
 
 //MARK: Storyboard Name
-enum Storyboard: String{
+enum Storyboard: String {
     case main = "Main"
 }
 
 //MARK: Enum for storyboard identifier
-enum StoryboardIdentifier: String{
+enum StoryboardIdentifier: String {
     case employeeList
     case employeeDetails
     
-    var storyboardName: String{
-        switch self{
+    var storyboardName: String {
+        switch self {
         case.employeeList, .employeeDetails:
             return  Storyboard.main.rawValue
         }

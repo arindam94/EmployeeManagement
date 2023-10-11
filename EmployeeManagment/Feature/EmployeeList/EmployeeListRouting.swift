@@ -9,13 +9,12 @@ import Foundation
 import UIKit
 
 //MARK: - EmployeeList Protocol
-protocol EmployeeListRouting{
+protocol EmployeeListRouting {
     func showEmployeeDetails(employeeData: EmployeeInfo)
 }
 
 
-struct EmployeeRouter{
-    
+struct EmployeeRouter {
     private var viewController: UIViewController?
     
     init(viewController: UIViewController? = nil) {
@@ -24,7 +23,7 @@ struct EmployeeRouter{
 }
 
 //MARK: - EmployeeList Implementation, on implementation it will route to EmployeeDetails Screen
-extension EmployeeRouter: EmployeeListRouting{
+extension EmployeeRouter: EmployeeListRouting {
     func showEmployeeDetails(employeeData: EmployeeInfo) {
         let configurator = EmployeeDetailsConfigurator(employeeDetails: employeeData)
         let employeeDetailsVc = configurator.configureViewController()

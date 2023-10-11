@@ -10,7 +10,7 @@ import XCTest
 
 
 final class MockDataProvider {
-    static func getEmployeeData()-> EmployeeData?{
+    static func getEmployeeData() -> EmployeeData? {
         guard let data = try?  TestUtils.dataValue(fromResource: "EmployeeDataRespone", ext: "json") else {return nil }
         debugPrint("data from json filer is - \(String(decoding: data, as: UTF8.self))")
         do{
@@ -22,5 +22,4 @@ final class MockDataProvider {
             return nil
         }
     }
-
 }

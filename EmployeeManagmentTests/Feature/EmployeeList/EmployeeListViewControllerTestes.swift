@@ -13,9 +13,8 @@ import iOSSnapshotTestCase
 import iOSSnapshotTestCaseCore
 @testable import EmployeeManagment
 
-private final class  MockEmployeeInteractor: EmployeeListInteractor{
+private final class  MockEmployeeInteractor: EmployeeListInteractor {
     func showEmployeeDetails(index: Int) {
-        
     }
     
     var employeeListDataExecuted: Bool = false
@@ -26,25 +25,22 @@ private final class  MockEmployeeInteractor: EmployeeListInteractor{
 }
 
 final class EmployeeListViewControllerTestes: FBSnapshotTestCase {
-
+    
     var employeeListViewController: EmployeeListViewController!
     var navigationController: UINavigationController!
     var sceneDelegate: SceneDelegate!
     
-    
     override func setUp() {
         super.setUp()
-         recordMode = false
+        recordMode = false
     }
     
-  
-
     override func tearDownWithError() throws {
-         employeeListViewController     = nil
-         navigationController                  = nil
-         sceneDelegate                            = nil
+        employeeListViewController     = nil
+        navigationController                  = nil
+        sceneDelegate                            = nil
     }
-
+    
     func testEmployeeDataListViewControllerDataLoading(){
         //Given
         let viewController: EmployeeListViewController = UIStoryboard.instantiate(identifier: .employeeList)
@@ -61,15 +57,12 @@ final class EmployeeListViewControllerTestes: FBSnapshotTestCase {
             XCTAssertTrue(interactor.employeeListDataExecuted)
         }
         wait(for: [expectation], timeout: 2.0)
-
     }
     
     
-
+    
     func testEmployeeListViewControlleWithNoResult() throws{
         loadViewController()
-//        employeeListViewController.viewDidLoad()
-        
         employeeListViewController.showError(errorMessage: "error message")
         let expectation = expectation(description: "Employeelist viewController")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
@@ -82,12 +75,11 @@ final class EmployeeListViewControllerTestes: FBSnapshotTestCase {
     func testEmployeeListViewControlleWithError() throws{
         loadViewController()
         employeeListViewController.loadViewIfNeeded()
-        
         employeeListViewController.showError(errorMessage: "error message")
         let expectation = expectation(description: "Employeelist viewController")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
             expectation.fulfill()
-
+            
             self.FBSnapshotVerifyViewController(self.navigationController.presentedViewController!)
         }
         wait(for: [expectation], timeout: 2.0)
@@ -100,7 +92,7 @@ final class EmployeeListViewControllerTestes: FBSnapshotTestCase {
             XCTFail("failed to load view controller")
             return
         }
-
+        
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let sceneDelegate = windowScene.delegate as? SceneDelegate else{
             return
         }
@@ -108,7 +100,5 @@ final class EmployeeListViewControllerTestes: FBSnapshotTestCase {
         self.sceneDelegate = sceneDelegate
         navigationController = UINavigationController(rootViewController: viewController)
         self.sceneDelegate.window?.rootViewController = navigationController
-    }
-
-
+    }    
 }

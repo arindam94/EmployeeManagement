@@ -11,21 +11,17 @@ import XCTest
 final class EmployeeListServiceTest: XCTestCase {
     
     var employeeService: EmployeeService?
-
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         employeeService = EmployeeService(httpClient: MockHTPClient())
     }
-
+    
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         employeeService = nil
     }
-
+    
     func testEmployeeListSuccessResponse(){
-        //given
         let expextation = XCTestExpectation(description: "Loading Employee data")
-        
         Task{
             do{
                 let emplopyeeData = try await employeeService?.fetchEmployeeData()
@@ -37,5 +33,5 @@ final class EmployeeListServiceTest: XCTestCase {
             }
         }
     }
-
+    
 }

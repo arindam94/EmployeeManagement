@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 //MARK: ViewController Configuration Protocol
-protocol Configurator{
-    func configureViewController()-> UIViewController
+protocol Configurator {
+    func configureViewController() -> UIViewController
 }
 
-struct EmployeeConfigurator{
+struct EmployeeConfigurator {
     private let service: EmployeeService
     private let  dataStore: Dataprovider
     
@@ -24,7 +24,7 @@ struct EmployeeConfigurator{
 }
 
 //MARK: Configurator Protocol Implementation
-extension EmployeeConfigurator: Configurator{
+extension EmployeeConfigurator: Configurator {
     func configureViewController() -> UIViewController {
         let viewController : EmployeeListViewController = UIStoryboard.instantiate(identifier: .employeeList)
         let router = EmployeeRouter(viewController: viewController)
@@ -33,5 +33,4 @@ extension EmployeeConfigurator: Configurator{
         viewController.interactor = interactor
         return viewController
     }
-    
 }

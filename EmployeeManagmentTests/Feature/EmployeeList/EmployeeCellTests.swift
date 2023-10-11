@@ -9,7 +9,6 @@ import XCTest
 @testable import EmployeeManagment
 
 final class EmployeeCellTests: XCTestCase {
-
     func testEmployeeCell(){
         let nib = UINib(nibName: "EmployeeListCell", bundle: Bundle(for: EmployeeListCell.self))
         if let cell = nib.instantiate(withOwner: self, options: nil).first as? EmployeeListCell{

@@ -9,16 +9,13 @@ import Foundation
 import Combine
 
 //MARK: - Mock HTTP client for Unit testing
-struct MockHTPClient: HttpsClientInterface{
+struct MockHTPClient: HttpsClientInterface {
     func loadData<T>(networkRequest: NetworkRequest<T>) -> AnyPublisher<T, ResponseError> where T : Decodable {
         let data = try? TestUtils.dataValue(fromResource: "EmployeeDataRespone", ext: "json")
-        
         guard let data = data else{return Fail(error: ResponseError.unexpectedStatusCode).eraseToAnyPublisher()}
         guard let employeeData: T = try? JSONDecoder().decode(T.self, from: data) else{
             return Fail(error: ResponseError.unexpectedStatusCode).eraseToAnyPublisher()
         }
         return Just(employeeData).setFailureType(to: ResponseError.self).eraseToAnyPublisher()
     }
-    
-    
 }

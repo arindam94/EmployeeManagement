@@ -8,7 +8,7 @@
 import XCTest
 @testable import EmployeeManagment
 
-final  class MockEmployeeListViewController:EmployeeListViewInterface{
+final  class MockEmployeeListViewController:EmployeeListViewInterface {
     var showErrorAlert: Bool = false
     var showEmployeeList: Bool = false
     
@@ -21,7 +21,7 @@ final  class MockEmployeeListViewController:EmployeeListViewInterface{
     }
 }
 
-final class MockEmployeeListRouter: EmployeeListRouting{
+final class MockEmployeeListRouter: EmployeeListRouting {
     var showEmployeeDetailsExecuted: Bool = false
     func showEmployeeDetails(employeeData: EmployeeManagment.EmployeeInfo) {
         showEmployeeDetailsExecuted = true
@@ -31,7 +31,7 @@ final class MockEmployeeListRouter: EmployeeListRouting{
 
 
 final class EmployeeListPresenterTests: XCTestCase {
-
+    
     func testEmployeeListPresenter() {
         //given
         let view = MockEmployeeListViewController()
@@ -85,14 +85,12 @@ final class EmployeeListPresenterTests: XCTestCase {
         let router = MockEmployeeListRouter()
         let presenter = EmployeePresenter(view: view, router: router)
         
-        
         //when
         guard let mockEMployeeData = MockDataProvider.getEmployeeData()?.users?.first else{
             XCTFail("Failed to provide data")
             return
         }
         presenter.showEmployeeDetails(info: mockEMployeeData)
-        
         
         //Then
         let expectation = expectation(description: "testEmployeePresenter")
@@ -102,5 +100,4 @@ final class EmployeeListPresenterTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 1)
     }
-
 }

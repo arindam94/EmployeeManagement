@@ -8,11 +8,11 @@
 import Foundation
 
 //MARK: - EmployeeDeatilsPresenter Protocol
-protocol EmployeeDetailsPresenterInterface{
+protocol EmployeeDetailsPresenterInterface {
     func updateEmployeeDetails()
 }
 
-struct EmployeeDetailsPresenter{
+struct EmployeeDetailsPresenter {
     private  var router: EmployeeDetailsRouter
     private weak var view: EmployeeDetailsViewInterface?
     private var employeeDetails: EmployeeInfo
@@ -22,11 +22,11 @@ struct EmployeeDetailsPresenter{
         self.view = view
         self.employeeDetails = employeeDetails
     }
-
+    
 }
 
 //MARK: - EmployeeDeatilsPresenter Protocol Implementation
-extension EmployeeDetailsPresenter: EmployeeDetailsPresenterInterface{
+extension EmployeeDetailsPresenter: EmployeeDetailsPresenterInterface {
     func updateEmployeeDetails() {
         view?.showEmployeeDetails(info: employeeDetails)
     }

@@ -7,12 +7,12 @@
 
 import UIKit
 
-class EmployeeListCell: UITableViewCell {
-
+final class EmployeeListCell: UITableViewCell {
+    
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var profileImageView: UIImageView!
     
-    var employeeDetails: EmployeeInfo?{
+    var employeeDetails: EmployeeInfo? {
         didSet{
             guard let employeeDetails = employeeDetails else{
                 return
@@ -24,17 +24,11 @@ class EmployeeListCell: UITableViewCell {
         }
     }
     
-
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
-    
 }

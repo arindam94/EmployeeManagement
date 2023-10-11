@@ -8,14 +8,12 @@
 import XCTest
 @testable import EmployeeManagment
 
-class MockEmployeeDetailsViewController:EmployeeDetailsViewInterface{
+final class MockEmployeeDetailsViewController:EmployeeDetailsViewInterface {
     var showEmployeeDetailsExecuted: Bool = false
-
     
     func showEmployeeDetails(info: EmployeeManagment.EmployeeInfo) {
         showEmployeeDetailsExecuted = true
     }
-    
 }
 
 
@@ -26,17 +24,13 @@ final class EmployeeDetailsPresenterTests: XCTestCase {
         let view = MockEmployeeDetailsViewController()
         let router = EmployeeDetailsRouter(viewController: UIViewController())
         
-        
         //when
         guard let  mockResponse = MockDataProvider.getEmployeeData()?.users?.first else{
             XCTFail("Failed on fetching data")
             return
         }
         let presenter = EmployeeDetailsPresenter(router: router, view: view, employeeDetails: mockResponse)
-
-        
         presenter.updateEmployeeDetails()
-        
         
         //Then
         let expectation = expectation(description: "testEmployeeDetailsPresenter")
@@ -46,5 +40,4 @@ final class EmployeeDetailsPresenterTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 1)
     }
-    
 }

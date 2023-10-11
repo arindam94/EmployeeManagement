@@ -8,7 +8,7 @@
 import XCTest
 @testable import EmployeeManagment
 
-private class MockEmployeeDetailsPresenter: EmployeeDetailsPresenterInterface{
+private final  class MockEmployeeDetailsPresenter: EmployeeDetailsPresenterInterface {
     var updateEmployeeDetailsExecuted: Bool = false
     func updateEmployeeDetails() {
         updateEmployeeDetailsExecuted = true
@@ -17,8 +17,8 @@ private class MockEmployeeDetailsPresenter: EmployeeDetailsPresenterInterface{
 
 
 final class EmployeeDetailsInteractorTests: XCTestCase {
-
-    func testEmployeeListInteractor(){
+    
+    func testEmployeeListInteractor() {
         //Given
         let presenter = MockEmployeeDetailsPresenter()
         let interactor = EmployeeDetailsInteractor(presenter: presenter)
@@ -34,5 +34,4 @@ final class EmployeeDetailsInteractorTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 0.2)
     }
-
 }

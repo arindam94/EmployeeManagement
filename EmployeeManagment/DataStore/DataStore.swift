@@ -8,13 +8,12 @@
 import Foundation
 
 //MARK: DataStore
-final class DataStore{
+final class DataStore {
     private var data: [EmployeeInfo] = []
-    
 }
 
 //MARK: Data Provider protocol implementation
-extension DataStore: Dataprovider{
+extension DataStore: Dataprovider {
     func addEmployeedata(dataValue: EmployeeData) {
         guard let users = dataValue.users else{return}
         self.data = users
@@ -27,5 +26,4 @@ extension DataStore: Dataprovider{
     func employeeDataAt(index: Int) -> EmployeeInfo? {
         return data[index]
     }
-    
 }

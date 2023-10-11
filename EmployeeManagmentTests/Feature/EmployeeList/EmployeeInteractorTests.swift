@@ -8,11 +8,9 @@
 import XCTest
 @testable import EmployeeManagment
 
-private class MockEmployeePresenter: EmployeePresenterInterface{
+private final class MockEmployeePresenter: EmployeePresenterInterface {
     func showEmployeeDetails(info: EmployeeManagment.EmployeeInfo) {
-        
     }
-    
     
     var showErroAlertExecuted: Bool = false
     var showEmployeeLisExecutedt: Bool = false
@@ -23,13 +21,11 @@ private class MockEmployeePresenter: EmployeePresenterInterface{
     func employeeRequestFailed(description: String) {
         showErroAlertExecuted = true
     }
-    
-    
 }
 
 
 final class EmployeeInteractorTests: XCTestCase {
-
+    
     func testEmployeeListInteractor(){
         //Given
         let serrvice = EmployeeService(httpClient: MockHTPClient())
@@ -47,5 +43,4 @@ final class EmployeeInteractorTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 0.2)
     }
-    
 }

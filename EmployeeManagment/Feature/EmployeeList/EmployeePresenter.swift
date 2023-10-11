@@ -8,13 +8,13 @@
 import Foundation
 
 //MARK: Employee Presenter protocol
-protocol EmployeePresenterInterface{
+protocol EmployeePresenterInterface {
     func employeeListUpdate(list: EmployeeData)
     func employeeRequestFailed(description: String)
     func showEmployeeDetails(info: EmployeeInfo)
 }
 
-struct EmployeePresenter{
+struct EmployeePresenter {
     private weak var view: EmployeeListViewInterface?
     private var router:  EmployeeListRouting
     init(view: EmployeeListViewInterface? = nil, router: EmployeeListRouting) {
@@ -24,7 +24,7 @@ struct EmployeePresenter{
 }
 
 //MARK: Implementation of Employee Presenter protocol.
-extension EmployeePresenter: EmployeePresenterInterface{
+extension EmployeePresenter: EmployeePresenterInterface {
     func showEmployeeDetails(info: EmployeeInfo) {
         DispatchQueue.main.async {
             router.showEmployeeDetails(employeeData: info)
@@ -42,6 +42,4 @@ extension EmployeePresenter: EmployeePresenterInterface{
             view?.showError(errorMessage: description)
         }
     }
-    
-    
 }

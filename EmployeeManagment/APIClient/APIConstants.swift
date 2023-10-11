@@ -8,7 +8,7 @@
 import Foundation
 
 //MARK: User API Constant
-struct EmployeeAPIConstants{
+struct EmployeeAPIConstants {
     //MARK: Base URL
     static let baseURL = "https://dummyjson.com"
     //MARK: Services

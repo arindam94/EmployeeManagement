@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol EmployeeListInteractor{
+protocol EmployeeListInteractor {
     func getListofEmployee()
     func showEmployeeDetails(index: Int)
 }
 
 
-struct EmployeeInteractor{
+struct EmployeeInteractor {
     private let service: EmployeeService
     private let presentter: EmployeePresenterInterface
     private let datsStore: Dataprovider
@@ -25,7 +25,7 @@ struct EmployeeInteractor{
     }
     
 }
-extension EmployeeInteractor: EmployeeListInteractor{
+extension EmployeeInteractor: EmployeeListInteractor {
     func showEmployeeDetails(index: Int) {
         if let employeeInfo = datsStore.employeeDataAt(index: index){
             presentter.showEmployeeDetails(info: employeeInfo)
@@ -44,8 +44,5 @@ extension EmployeeInteractor: EmployeeListInteractor{
                 presentter.employeeRequestFailed(description: error.errorDescription)
             }
         }
-
     }
-    
-    
 }

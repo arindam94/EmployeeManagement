@@ -10,26 +10,22 @@ import XCTest
 
 
 
-class EmployeeTableUITests: XCTestCase {
-    
+final class EmployeeTableUITests: XCTestCase {
     var app: XCUIApplication!
     
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         app = XCUIApplication()
-        app.launch() // Launch your app
+        app.launch()
     }
     
     func testTableViewCellExists() {
         let app = XCUIApplication()
-        app.launch() // Launch your app
+        app.launch()
         
         // Access the table view
         let tableView = app.tables["myTableViewIdentifier"]
         
         // Check if the table view exists
         XCTAssertTrue(tableView.exists, "The table view doesn't exist")
-        
     }
-
 }

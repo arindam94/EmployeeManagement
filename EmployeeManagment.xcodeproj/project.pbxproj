@@ -16,7 +16,6 @@
 		427001962ACFBD12000E7D02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 427001942ACFBD12000E7D02 /* Main.storyboard */; };
 		427001982ACFBD13000E7D02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427001972ACFBD13000E7D02 /* Assets.xcassets */; };
 		4270019B2ACFBD13000E7D02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 427001992ACFBD13000E7D02 /* LaunchScreen.storyboard */; };
-		427001A62ACFBD13000E7D02 /* EmployeeManagmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427001A52ACFBD13000E7D02 /* EmployeeManagmentTests.swift */; };
 		427001C42ACFC173000E7D02 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427001C32ACFC173000E7D02 /* APIConstants.swift */; };
 		427001C62ACFC59C000E7D02 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427001C52ACFC59C000E7D02 /* ResponseError.swift */; };
 		427001CB2ACFC751000E7D02 /* LocalizationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427001CA2ACFC751000E7D02 /* LocalizationKeys.swift */; };
@@ -102,7 +101,6 @@
 		4270019A2ACFBD13000E7D02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4270019C2ACFBD13000E7D02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		427001A12ACFBD13000E7D02 /* EmployeeManagmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeeManagmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		427001A52ACFBD13000E7D02 /* EmployeeManagmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeManagmentTests.swift; sourceTree = "<group>"; };
 		427001AB2ACFBD13000E7D02 /* EmployeeManagmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeeManagmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		427001C32ACFC173000E7D02 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		427001C52ACFC59C000E7D02 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
@@ -239,7 +237,6 @@
 				42EED3662AD3D84A008666B0 /* Services */,
 				42EED3612AD3D1E7008666B0 /* APIClient */,
 				427002342AD3B6E1000E7D02 /* DataStore */,
-				427001A52ACFBD13000E7D02 /* EmployeeManagmentTests.swift */,
 			);
 			path = EmployeeManagmentTests;
 			sourceTree = "<group>";
@@ -653,7 +650,6 @@
 				42EED3682AD3D8AA008666B0 /* EmployeeListServiceTest.swift in Sources */,
 				426038BE2AD52E3700B802FC /* EmployeeCellTests.swift in Sources */,
 				42ED1C8E2AD5C9A600C80275 /* EmployeeDetailsPresenterTests.swift in Sources */,
-				427001A62ACFBD13000E7D02 /* EmployeeManagmentTests.swift in Sources */,
 				42ED1C8C2AD5C34F00C80275 /* EmployeeDetailsRouterTests.swift in Sources */,
 				427002362AD3B70B000E7D02 /* DataStoreTests.swift in Sources */,
 				427002382AD3B7CE000E7D02 /* MockDataProvider.swift in Sources */,

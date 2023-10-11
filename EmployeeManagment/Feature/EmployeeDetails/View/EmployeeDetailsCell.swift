@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EmployeeDetailsCell: UITableViewCell {
+final class EmployeeDetailsCell: UITableViewCell {
 
     @IBOutlet weak private var labelName: UILabel!
     @IBOutlet weak private var labelEmail: UILabel!
@@ -15,7 +15,7 @@ class EmployeeDetailsCell: UITableViewCell {
     @IBOutlet weak private var labelCompany: UILabel!
     @IBOutlet weak private var labelDepartment: UILabel!
     
-    var employeeDetails: EmployeeInfo?{
+    var employeeDetails: EmployeeInfo? {
         didSet{
             if let employeeDetails = employeeDetails{
                 labelName.text = "\(employeeDetails.firstName ?? "") \(employeeDetails.maidenName ?? "") \(employeeDetails.lastName ?? "")"
@@ -30,5 +30,4 @@ class EmployeeDetailsCell: UITableViewCell {
             }
         }
     }
-
 }

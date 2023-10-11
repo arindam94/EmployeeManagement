@@ -9,8 +9,7 @@ import Foundation
 
 //Mark: -Network Request
 
-struct NetworkRequest<T: Decodable>{
-    
+struct NetworkRequest<T: Decodable> {
     let url: String
     let parameters: [String: CustomStringConvertible]
     var request: URLRequest? {
@@ -20,7 +19,6 @@ struct NetworkRequest<T: Decodable>{
         guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else{
             return nil
         }
-        
         components.queryItems = parameters.keys.map({ (key) -> URLQueryItem in
             URLQueryItem(name: key, value: parameters[key]?.description)
         })
@@ -39,7 +37,7 @@ struct NetworkRequest<T: Decodable>{
 }
 
 //MARK: - Helper for network request
-extension NetworkRequest{
+extension NetworkRequest {
     static func employeeDataRequest()-> NetworkRequest<EmployeeData>{
         let url = EmployeeAPIConstants.baseURL + EmployeeAPIConstants.userListService
         return NetworkRequest<EmployeeData>(url: url, parameters: [:])

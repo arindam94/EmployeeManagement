@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol EmployeeDetailsViewInterface: AnyObject{
+protocol EmployeeDetailsViewInterface: AnyObject {
     func showEmployeeDetails(info: EmployeeInfo)
 }
 
-class EmployeeDetailsViewController: UIViewController {
+final class EmployeeDetailsViewController: UIViewController {
     @IBOutlet weak private var employeeDetailsTableView: UITableView!
     
-     var employeeData: EmployeeInfo?
+    var employeeData: EmployeeInfo?
     var interactor: EmployeeDetailsInteractorInterface?
     
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class EmployeeDetailsViewController: UIViewController {
         interactor?.showEmployeeData()
     }
     
-    fileprivate func setupUI(){
+    fileprivate func setupUI() {
         employeeDetailsTableView.dataSource = self
         employeeDetailsTableView.delegate = self
         EmployeeDetailsCell.registerCellWithTableView(tablView: employeeDetailsTableView)
@@ -36,7 +36,7 @@ class EmployeeDetailsViewController: UIViewController {
     
 }
 
-extension EmployeeDetailsViewController: EmployeeDetailsViewInterface, UITableViewDataSource, UITableViewDelegate{
+extension EmployeeDetailsViewController: EmployeeDetailsViewInterface, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
