@@ -24,8 +24,8 @@ https://github.com/arindam94/EmployeeManagement/assets/30508758/dc43a535-02d4-4f
 
   
 ## Unit Testing and code coverage
-* EmployeeManagement has 84% of code coverage, including Unit testing and UI testing. UI testing is covered by- iOSSnapshotTestCase
-<img width="1429" alt="Screenshot 2023-10-11 at 3 11 35 PM" src="https://github.com/arindam94/EmployeeManagement/assets/30508758/6b1e1078-0b26-4bd0-bc94-bfd52a855c66">
+* EmployeeManagement has 91% of code coverage, including Unit testing and UI testing. UI testing is covered by- iOSSnapshotTestCase
+<img width="1435" alt="ss-code" src="https://github.com/arindam94/EmployeeManagement/assets/30508758/f7ff1eaf-a245-4bcf-908b-0a961a4ae8ec">
 
 
 
