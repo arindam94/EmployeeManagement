@@ -7,33 +7,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8F924D45-7D00-4CF7-806C-7899DB0D6977"
+            uuid = "B716EFE1-0787-4A59-90AC-FB4F08D1B1C6"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EmployeeManagment/Feature/EmployeeList/View/EmployeeListViewController.swift"
+            filePath = "EmployeeManagmentTests/Feature/EmployeeList/EmployeeListViewControllerTestes.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "setupUI()"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "testEmployeeListViewControlleWithError()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "08960459-8FAC-4428-898F-55F67EF144ED"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EmployeeManagment/Feature/EmployeeList/EmployeeListRouting.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "showEmployeeDetails(employeeData:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B716EFE1-0787-4A59-90AC-FB4F08D1B1C6 - 57d0e8a057fda48a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EmployeeManagmentTests.EmployeeListViewControllerTestes.testEmployeeListViewControlleWithError() throws -&gt; ()"
+                  moduleName = "EmployeeManagmentTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arindamsantra/Documents/Workspace/TCS/EmployeeManagment/EmployeeManagmentTests/Feature/EmployeeList/EmployeeListViewControllerTestes.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "804">
+               </Location>
+               <Location
+                  uuid = "B716EFE1-0787-4A59-90AC-FB4F08D1B1C6 - 57d0e8a057fda4a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EmployeeManagmentTests.EmployeeListViewControllerTestes.testEmployeeListViewControlleWithError() throws -&gt; ()"
+                  moduleName = "EmployeeManagmentTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arindamsantra/Documents/Workspace/TCS/EmployeeManagment/EmployeeManagmentTests/Feature/EmployeeList/EmployeeListViewControllerTestes.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "516">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

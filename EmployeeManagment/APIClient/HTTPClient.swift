@@ -25,7 +25,6 @@ extension HTTPClient: HttpsClientInterface{
             return Fail(error: ResponseError.invalidURL).eraseToAnyPublisher()
         }
        
-        debugPrint("Body of call is \(request.httpMethod)")
         return URLSession.shared.dataTaskPublisher(for: request)
             .map{$0.data}
             .decode(type: T.self, decoder: JSONDecoder())

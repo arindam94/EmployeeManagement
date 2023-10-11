@@ -28,7 +28,7 @@ extension EmployeeConfigurator: Configurator{
         let viewController : EmployeeListViewController = UIStoryboard.instantiate(identifier: .employeeList)
         
         let router = EmployeeRouter(viewController: viewController)
-        let presenter = EmployeePresenter(view: viewController as! EmployeeListViewInterface, router: router)
+        let presenter = EmployeePresenter(view: viewController, router: router)
         let interactor = EmployeeInteractor(service: service, presentter: presenter, datsStore: dataStore)
         viewController.interactor = interactor
         return viewController

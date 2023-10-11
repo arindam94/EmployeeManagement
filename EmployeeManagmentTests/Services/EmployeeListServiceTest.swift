@@ -30,7 +30,6 @@ final class EmployeeListServiceTest: XCTestCase {
             do{
                 let emplopyeeData = try await employeeService?.fetchEmployeeData()
                 expextation.fulfill()
-                debugPrint(emplopyeeData?.users?.count)
                 XCTAssertEqual(emplopyeeData?.users?.count, 1)
             }
             catch{

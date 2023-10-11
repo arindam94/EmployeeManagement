@@ -61,7 +61,6 @@ extension EmployeeListViewController: EmployeeListViewInterface, UITableViewData
     
     
     func showListOfEmployee(list: EmployeeData) {
-        debugPrint(list.users)
         self.employeeData = list.users!
         self.employeeTable.reloadData()
     }

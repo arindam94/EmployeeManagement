@@ -62,10 +62,6 @@ final class EmployeeListPresenterTests: XCTestCase {
         
         
         //when
-        guard let  mockResponse = MockDataProvider.getEmployeeData() else{
-            XCTFail("Failed on fetching data")
-            return
-        }
         presenter.employeeRequestFailed(description: "Error ")
         
         
