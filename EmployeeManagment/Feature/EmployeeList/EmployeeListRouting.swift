@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 protocol EmployeeListRouting{
-    func showEmployeeDetails(employeeDate: [EmployeeData])
+    func showEmployeeDetails(employeeData: EmployeeInfo)
 }
 
 
@@ -22,10 +22,11 @@ struct EmployeeRouter{
 }
 
 extension EmployeeRouter: EmployeeListRouting{
-    func showEmployeeDetails(employeeDate: [EmployeeData]) {
-        let service = EmployeeService(httpClient: HTTPClient.callHTTPClient())
-      //  let  configurator = EmployeeConfigurator(service: service, dataStore: <#T##Dataprovider#>)
+    func showEmployeeDetails(employeeData: EmployeeInfo) {
+        let configurator = EmployeeDetailsConfigurator(employeeDetails: employeeData)
+        let employeeDetailsVc = configurator.configureViewController()
+        DispatchQueue.main.async {
+            self.viewController?.navigationController?.pushViewController(employeeDetailsVc, animated: true)
+        }
     }
-    
-    
 }

@@ -18,53 +18,22 @@
             endingLineNumber = "33"
             landmarkName = "setupUI()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8F924D45-7D00-4CF7-806C-7899DB0D6977 - a58100f15cabd62d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EmployeeManagment.EmployeeListViewController.setupUI() -&gt; ()"
-                  moduleName = "EmployeeManagment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/arindamsantra/Documents/Workspace/TCS/EmployeeManagment/EmployeeManagment/Feature/EmployeeList/View/EmployeeListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "80">
-               </Location>
-               <Location
-                  uuid = "8F924D45-7D00-4CF7-806C-7899DB0D6977 - a58100f15cabd62d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EmployeeManagment.EmployeeListViewController.setupUI() -&gt; ()"
-                  moduleName = "EmployeeManagment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/arindamsantra/Documents/Workspace/TCS/EmployeeManagment/EmployeeManagment/Feature/EmployeeList/View/EmployeeListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "276">
-               </Location>
-               <Location
-                  uuid = "8F924D45-7D00-4CF7-806C-7899DB0D6977 - a58100f15cabd5a9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EmployeeManagment.EmployeeListViewController.setupUI() -&gt; ()"
-                  moduleName = "EmployeeManagment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/arindamsantra/Documents/Workspace/TCS/EmployeeManagment/EmployeeManagment/Feature/EmployeeList/View/EmployeeListViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "280">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08960459-8FAC-4428-898F-55F67EF144ED"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmployeeManagment/Feature/EmployeeList/EmployeeListRouting.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "showEmployeeDetails(employeeData:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

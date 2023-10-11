@@ -18,4 +18,5 @@ struct EmployeeInfo: Codable, Hashable{
     let phone: String?
     let username: String?
     let image: String?
+    let company:  CompanyInfo?
 }

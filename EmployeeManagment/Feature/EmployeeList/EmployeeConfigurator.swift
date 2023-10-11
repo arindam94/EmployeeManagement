@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol Configuratior{
+protocol Configurator{
     func configureViewController()-> UIViewController
 }
 
@@ -23,7 +23,7 @@ struct EmployeeConfigurator{
     
 }
 
-extension EmployeeConfigurator: Configuratior{
+extension EmployeeConfigurator: Configurator{
     func configureViewController() -> UIViewController {
         let viewController : EmployeeListViewController = UIStoryboard.instantiate(identifier: .employeeList)
         

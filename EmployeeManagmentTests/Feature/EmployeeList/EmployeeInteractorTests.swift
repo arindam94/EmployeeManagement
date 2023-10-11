@@ -9,6 +9,10 @@ import XCTest
 @testable import EmployeeManagment
 
 private class MockEmployeePresenter: EmployeePresenterInterface{
+    func showEmployeeDetails(info: EmployeeManagment.EmployeeInfo) {
+        
+    }
+    
     
     var showErroAlertExecuted: Bool = false
     var showEmployeeLisExecutedt: Bool = false

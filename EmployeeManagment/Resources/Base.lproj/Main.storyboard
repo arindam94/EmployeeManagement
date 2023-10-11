@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,6 +29,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="991.60305343511448" y="3.5211267605633805"/>
+        </scene>
+        <!--Employee Details View Controller-->
+        <scene sceneID="nv4-ua-na9">
+            <objects>
+                <viewController storyboardIdentifier="employeeDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vh3-vs-sUR" customClass="EmployeeDetailsViewController" customModule="EmployeeManagment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4WF-lL-Hvo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wzf-CD-ceO">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="x5P-uS-Qa2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wzf-CD-ceO" firstAttribute="top" secondItem="x5P-uS-Qa2" secondAttribute="top" id="IEa-kC-z3f"/>
+                            <constraint firstItem="x5P-uS-Qa2" firstAttribute="bottom" secondItem="Wzf-CD-ceO" secondAttribute="bottom" id="RRI-cz-jXp"/>
+                            <constraint firstItem="x5P-uS-Qa2" firstAttribute="trailing" secondItem="Wzf-CD-ceO" secondAttribute="trailing" id="YId-jr-1ga"/>
+                            <constraint firstItem="Wzf-CD-ceO" firstAttribute="leading" secondItem="x5P-uS-Qa2" secondAttribute="leading" id="uSc-pp-Qqz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="employeeDetailsTableView" destination="Wzf-CD-ceO" id="wnO-Bb-jDy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dHH-F6-Hej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1947" y="-147"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Os8-P1-cNk">

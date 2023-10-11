@@ -55,6 +55,10 @@ extension EmployeeListViewController: EmployeeListViewInterface, UITableViewData
         return 110
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        interactor?.showEmployeeDetails(index: indexPath.row)
+    }
+    
     
     func showListOfEmployee(list: EmployeeData) {
         debugPrint(list.users)

@@ -8,7 +8,7 @@
 import XCTest
 @testable import EmployeeManagment
 
-private class MockEmployeeListViewController:EmployeeListViewInterface{
+ class MockEmployeeListViewController:EmployeeListViewInterface{
     var showErrorAlert: Bool = false
     var showEmployeeList: Bool = false
     

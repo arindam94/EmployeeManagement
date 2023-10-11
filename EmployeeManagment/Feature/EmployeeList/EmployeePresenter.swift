@@ -10,6 +10,7 @@ import Foundation
 protocol EmployeePresenterInterface{
     func employeeListUpdate(list: EmployeeData)
     func employeeRequestFailed(description: String)
+    func showEmployeeDetails(info: EmployeeInfo)
 }
 
 struct EmployeePresenter{
@@ -22,6 +23,12 @@ struct EmployeePresenter{
 }
 
 extension EmployeePresenter: EmployeePresenterInterface{
+    func showEmployeeDetails(info: EmployeeInfo) {
+        DispatchQueue.main.async {
+            router.showEmployeeDetails(employeeData: info)
+        }
+    }
+    
     func employeeListUpdate(list: EmployeeData) {
         DispatchQueue.main.async {
             view?.showListOfEmployee(list: list)

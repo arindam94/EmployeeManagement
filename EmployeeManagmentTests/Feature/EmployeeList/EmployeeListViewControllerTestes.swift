@@ -9,13 +9,15 @@ import XCTest
 @testable import EmployeeManagment
 
 private final class  MockEmployeeInteractor: EmployeeListInteractor{
+    func showEmployeeDetails(index: Int) {
+        
+    }
+    
     var employeeListDataExecuted: Bool = false
     
     func getListofEmployee() {
         employeeListDataExecuted = true
     }
-    
-    
 }
 
 final class EmployeeListViewControllerTestes: XCTestCase {

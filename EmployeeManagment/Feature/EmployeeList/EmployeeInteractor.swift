@@ -9,6 +9,7 @@ import Foundation
 
 protocol EmployeeListInteractor{
     func getListofEmployee()
+    func showEmployeeDetails(index: Int)
 }
 
 
@@ -25,6 +26,12 @@ struct EmployeeInteractor{
     
 }
 extension EmployeeInteractor: EmployeeListInteractor{
+    func showEmployeeDetails(index: Int) {
+        if let employeeInfo = datsStore.employeeDataAt(index: index){
+            presentter.showEmployeeDetails(info: employeeInfo)
+        }
+    }
+    
     func getListofEmployee() {
         Task{
             do{
