@@ -8,8 +8,6 @@
 import XCTest
 @testable import EmployeeManagment
 
-
-
 final class EmployeeTableUITests: XCTestCase {
     var app: XCUIApplication!
     
