@@ -8,30 +8,28 @@
 import Foundation
 import Combine
 
-//MARK: - HTTP client interface
+// MARK: - HTTP client interface
 protocol HttpsClientInterface {
     func loadData<T: Decodable>(networkRequest: NetworkRequest<T>) -> AnyPublisher<T, ResponseError>
 }
 
 struct HTTPClient {
-    static func callHTTPClient()-> HttpsClientInterface {
+    static func callHTTPClient() -> HttpsClientInterface {
         return HTTPClient()
     }
 }
 
-
 extension HTTPClient: HttpsClientInterface {
-    func loadData<T>(networkRequest: NetworkRequest<T>) -> AnyPublisher<T, ResponseError> where T : Decodable {
-        guard let request = networkRequest.request else{
+    func loadData<T>(networkRequest: NetworkRequest<T>) -> AnyPublisher<T, ResponseError> where T: Decodable {
+        guard let request = networkRequest.request else {
             return Fail(error: ResponseError.invalidURL).eraseToAnyPublisher()
         }
-       
         return URLSession.shared.dataTaskPublisher(for: request)
-            .map{$0.data}
+            .map {$0.data}
             .decode(type: T.self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .mapError { error in
-                switch error{
+                switch error {
                 case is URLError:
                     return ResponseError.invalidURL
                 case is DecodingError:

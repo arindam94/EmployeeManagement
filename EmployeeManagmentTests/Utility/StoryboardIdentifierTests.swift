@@ -9,7 +9,7 @@ import XCTest
 @testable import EmployeeManagment
 
 final class StoryboardIdentifierTests: XCTestCase {
-    func testStoryBoardIdnetifier(){
+    func testStoryBoardIdnetifier() {
         XCTAssertEqual(StoryboardIdentifier.employeeList.storyboardName, "Main")
     }
 }

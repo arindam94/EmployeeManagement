@@ -9,17 +9,14 @@ import XCTest
 @testable import EmployeeManagment
 
 final class EmployeeInteractorTests: XCTestCase {
-    
-    func testEmployeeListInteractor(){
-        //Given
+    func testEmployeeListInteractor() {
+        // given
         let serrvice = EmployeeService(httpClient: MockHTPClient())
         let presenter = MockEmployeePresenter()
         let interactor = EmployeeInteractor(service: serrvice, presenter: presenter, dataStore: DataStore())
-        
-        //When
+        // when
         interactor.getListofEmployee()
-        
-        //then
+        // then
         let expectation = expectation(description: "EmployeePresenter")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             expectation.fulfill()

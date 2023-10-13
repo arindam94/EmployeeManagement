@@ -8,14 +8,12 @@
 import XCTest
 @testable import EmployeeManagment
 
-final  class MockEmployeeListViewController:EmployeeListViewDelegate {
+final  class MockEmployeeListViewController: EmployeeListViewDelegate {
     var showErrorAlert: Bool = false
     var showEmployeeList: Bool = false
-    
     func showListOfEmployee(list: EmployeeData) {
         showEmployeeList = true
     }
-    
     func showError(errorMessage: String) {
         showErrorAlert = true
     }

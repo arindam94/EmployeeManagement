@@ -10,12 +10,10 @@ import XCTest
 
 final class EmployeeDetailsTableUITests: XCTestCase {
     var app: XCUIApplication!
-    
     override func setUpWithError() throws {
         app = XCUIApplication()
         app.launch()
     }
-    
     func testTableViewCellExists() {
         let app = XCUIApplication()
         app.launch()

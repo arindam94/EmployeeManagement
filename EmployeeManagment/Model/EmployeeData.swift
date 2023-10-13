@@ -7,9 +7,7 @@
 
 import Foundation
 
-//MARK: EmployeeData Model
+// MARK: EmployeeData Model
 struct EmployeeData: Codable {
-    let users:[EmployeeInfo]?
+    let users: [EmployeeInfo]?
 }
-
-

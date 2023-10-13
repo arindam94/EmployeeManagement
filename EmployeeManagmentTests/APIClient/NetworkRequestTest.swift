@@ -8,15 +8,13 @@
 import XCTest
 @testable import EmployeeManagment
 final class NetworkRequestTest: XCTestCase {
-    
-    func testNetworkRequestForEmployeeData(){
-        //when
+    func testNetworkRequestForEmployeeData() {
+        // when
         let networkRequest = NetworkRequest<EmployeeData>.employeeDataRequest()
-        //then
+        // then
         XCTAssertEqual(networkRequest.url, "https://dummyjson.com/users")
         XCTAssertEqual(networkRequest.parameters.count, 0)
         let request = networkRequest.request
         XCTAssertNotNil(request)
     }
-    
 }

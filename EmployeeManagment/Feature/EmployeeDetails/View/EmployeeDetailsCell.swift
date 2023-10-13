@@ -14,19 +14,18 @@ final class EmployeeDetailsCell: UITableViewCell {
     @IBOutlet weak private var labelPhone: UILabel!
     @IBOutlet weak private var labelCompany: UILabel!
     @IBOutlet weak private var labelDepartment: UILabel!
-    
+
     var employeeDetails: EmployeeInfo? {
-        didSet{
-            if let employeeDetails = employeeDetails{
-                labelName.text = "\(employeeDetails.firstName ?? "") \(employeeDetails.maidenName ?? "") \(employeeDetails.lastName ?? "")"
+        didSet {
+            if let employeeDetails = employeeDetails {
+                labelName.text = String.getCompleteName(employeeDetails: employeeDetails)
                 labelEmail.text = "\(employeeDetails.email ?? "-")"
                 labelPhone.text = "\(employeeDetails.phone ?? "-")"
 
-                if let companyData = employeeDetails.company{
-                    labelCompany.text = "\(companyData.name ?? "-")"
+                if let companyData = employeeDetails.company {
+                    labelCompany.text = "\( companyData.name ?? "-")"
                     labelDepartment.text = "\(companyData.department ?? "-")"
                 }
-                
             }
         }
     }

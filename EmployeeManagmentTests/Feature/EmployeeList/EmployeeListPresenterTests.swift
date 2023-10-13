@@ -10,19 +10,17 @@ import XCTest
 
 final class EmployeeListPresenterTests: XCTestCase {
     func testEmployeeListPresenter() {
-        //given
+        // given
         let view = MockEmployeeListViewController()
         let router = MockEmployeeListRouter()
         let presenter = EmployeePresenter(view: view, router: router)
-        
-        //when
-        guard let  mockResponse = MockDataProvider.getEmployeeData() else{
+        // when
+        guard let  mockResponse = MockDataProvider.getEmployeeData() else {
             XCTFail("Failed on fetching data")
             return
         }
         presenter.employeeListUpdate(list: mockResponse )
-        
-        //Then
+        // then
         let expectation = expectation(description: "testEmployeePresenter")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             expectation.fulfill()
@@ -30,19 +28,14 @@ final class EmployeeListPresenterTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 1)
     }
-    
-    
-    
     func testEmployeeListPresenterWithError() {
-        //given
+        // given
         let view = MockEmployeeListViewController()
         let router = MockEmployeeListRouter()
         let presenter = EmployeePresenter(view: view, router: router)
-        
-        //when
+        // when
         presenter.employeeRequestFailed(description: "Error ")
-        
-        //Then
+        // then
         let expectation = expectation(description: "testEmployeePresenter")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             expectation.fulfill()
@@ -50,22 +43,19 @@ final class EmployeeListPresenterTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 1)
     }
-    
-    
     func testEmployeeListPresenterShowEmployeeDetails() {
-        //given
+        // given
         let view = MockEmployeeListViewController()
         let router = MockEmployeeListRouter()
         let presenter = EmployeePresenter(view: view, router: router)
-        
-        //when
-        guard let mockEMployeeData = MockDataProvider.getEmployeeData()?.users?.first else{
+        // when
+        guard let mockEMployeeData =
+                MockDataProvider.getEmployeeData()?.users?.first else {
             XCTFail("Failed to provide data")
             return
         }
         presenter.showEmployeeDetails(info: mockEMployeeData)
-        
-        //Then
+        // then
         let expectation = expectation(description: "testEmployeePresenter")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             expectation.fulfill()

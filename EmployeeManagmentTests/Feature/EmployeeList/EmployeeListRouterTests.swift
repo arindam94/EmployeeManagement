@@ -11,21 +11,18 @@ import XCTest
 final class EmployeeListRouterTests: XCTestCase {
     var viewController: UIViewController!
     var navigationController: UINavigationController!
-    
     override func setUpWithError() throws {
         viewController = UIStoryboard.instantiate(identifier: .employeeList)
         navigationController = UINavigationController(rootViewController: viewController)
     }
-    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         viewController = nil
         navigationController = nil
     }
-    
     func testEmployeeListRouter() {
         let router = EmployeeRouter(viewController: viewController)
-        if  let mockData = MockDataProvider.getEmployeeData()?.users?.first{
+        if  let mockData = MockDataProvider.getEmployeeData()?.users?.first {
             router.showEmployeeDetails(employeeData: mockData)
         }
         let expectation = expectation(description: "testEmployeeRouter")
@@ -37,5 +34,4 @@ final class EmployeeListRouterTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 3)
     }
-    
 }

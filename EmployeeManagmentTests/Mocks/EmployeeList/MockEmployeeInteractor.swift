@@ -11,9 +11,7 @@ import XCTest
  final class  MockEmployeeInteractor: EmployeeListInteractor {
     func showEmployeeDetails(index: Int) {
     }
-    
     var employeeListDataExecuted: Bool = false
-    
     func getListofEmployee() {
         employeeListDataExecuted = true
     }

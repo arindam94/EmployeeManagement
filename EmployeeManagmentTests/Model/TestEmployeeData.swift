@@ -8,24 +8,20 @@
 import XCTest
 @testable import EmployeeManagment
 final class TestEmployeeData: XCTestCase {
-    
-    func testEmployeeDataParsing(){
-        do{
-            //given
+    func testEmployeeDataParsing() {
+        do {
+            // given
             let data = try  TestUtils.dataValue(fromResource: "EmployeeDataRespone", ext: "json")
-            //When
+            // when
             let employee = try? JSONDecoder().decode(EmployeeData.self, from: data)
-            //then
-            if let employee = employee{
+            // then
+            if let employee = employee {
                 XCTAssertEqual(employee.users?.count, 1)
-            }
-            else{
+            } else {
                 XCTFail("Respone decoding failed")
             }
-        }
-        catch let error{
+        } catch let error {
             XCTFail(error.localizedDescription)
-            
         }
     }
 }
