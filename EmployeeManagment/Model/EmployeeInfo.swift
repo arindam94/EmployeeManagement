@@ -7,7 +7,7 @@
 
 import Foundation
 
-//MARK: EmployeeInfo Model
+// MARK: EmployeeInfo Model
 struct EmployeeInfo: Codable, Hashable {
     let id: Int?
     let firstName: String?
@@ -19,5 +19,5 @@ struct EmployeeInfo: Codable, Hashable {
     let phone: String?
     let username: String?
     let image: String?
-    let company:  CompanyInfo?
+    let company: CompanyInfo?
 }

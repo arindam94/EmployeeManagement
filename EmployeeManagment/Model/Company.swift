@@ -7,8 +7,8 @@
 
 import Foundation
 
-//MARK: Company Info Model
+// MARK: Company Info Model
 struct CompanyInfo: Codable, Hashable {
-    let department:String?
+    let department: String?
     let name: String?
 }

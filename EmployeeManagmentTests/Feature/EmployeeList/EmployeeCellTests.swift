@@ -9,10 +9,10 @@ import XCTest
 @testable import EmployeeManagment
 
 final class EmployeeCellTests: XCTestCase {
-    func testEmployeeCell(){
-        let nib = UINib(nibName: AppConstants.employeeListCellIdentifier, bundle: Bundle(for: EmployeeListCell.self))
-        if let cell = nib.instantiate(withOwner: self, options: nil).first as? EmployeeListCell{
-            if let employeeData = MockDataProvider.getEmployeeData()?.users?.first{
+    func testEmployeeCell() {
+        let nib = UINib(nibName: Constants.lististCellIdentifier, bundle: Bundle(for: EmployeeListCell.self))
+        if let cell = nib.instantiate(withOwner: self, options: nil).first as? EmployeeListCell {
+            if let employeeData = MockDataProvider.getEmployeeData()?.users?.first {
                 cell.employeeDetails = employeeData
                 XCTAssertEqual(cell.accessoryType, .disclosureIndicator)
             }

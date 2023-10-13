@@ -11,12 +11,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
+    func scene(_ scene: UIScene,
+               willConnectTo session: UISceneSession,
+               options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else {return}
+
         window = UIWindow(windowScene: windowScene)
-        
         let store = DataStore()
         let service = EmployeeService(httpClient: HTTPClient.callHTTPClient())
         let configurator = EmployeeConfigurator(service: service, dataStore: store)
@@ -25,6 +25,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
-
 }
-

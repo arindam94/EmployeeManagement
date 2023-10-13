@@ -11,13 +11,11 @@ import XCTest
 final class MockEmployeePresenter: EmployeePresenterInterface {
     func showEmployeeDetails(info: EmployeeManagment.EmployeeInfo) {
     }
-    
     var showErroAlertExecuted: Bool = false
     var showEmployeeLisExecutedt: Bool = false
     func employeeListUpdate(list: EmployeeData) {
         showEmployeeLisExecutedt = true
     }
-    
     func employeeRequestFailed(description: String) {
         showErroAlertExecuted = true
     }

@@ -10,27 +10,27 @@ import XCTest
 
 final class DataStoreTests: XCTestCase {
     var dataStore: DataStore!
-    
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         dataStore = DataStore()
     }
-    
+
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         dataStore = nil
     }
-    
-    func testDataStoreAddEmployeeData(){
-        //Given
-        guard let employeeList =  MockDataProvider.getEmployeeData() else{
+
+    func testDataStoreAddEmployeeData() {
+        // given
+        guard let employeeList =  MockDataProvider.getEmployeeData() else {
             XCTFail("Fail to provide mock Data")
             return
         }
         XCTAssertTrue(dataStore.employeeDataList.isEmpty)
-        //When
+        // when
         dataStore.addEmployeedata(dataValue: employeeList)
-        //then
+        // then
         XCTAssertFalse(dataStore.employeeDataList.isEmpty)
         XCTAssertFalse(dataStore.employeeDataList.isEmpty)
     }

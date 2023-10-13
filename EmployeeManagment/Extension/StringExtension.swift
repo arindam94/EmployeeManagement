@@ -7,9 +7,17 @@
 
 import Foundation
 
-//MARK: Extension for localized string
+// MARK: Extension for localized string
 extension String {
     var localized: String {
         NSLocalizedString(self, comment: self)
+    }
+
+    static func getCompleteName(employeeDetails: EmployeeInfo) -> String {
+        var completeName: String = ""
+        completeName += "\(employeeDetails.firstName ?? "")"
+        completeName += " \(employeeDetails.maidenName ?? "")"
+        completeName += " \(employeeDetails.lastName ?? "")"
+        return completeName
     }
 }

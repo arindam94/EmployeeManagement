@@ -9,21 +9,18 @@ import XCTest
 @testable import EmployeeManagment
 
 final class EmployeeDetailsPresenterTests: XCTestCase {
-    
     func testEmployeeDetailsPresenter() {
-        //given
+        // given
         let view = MockEmployeeDetailsViewController()
         let router = EmployeeDetailsRouter(viewController: UIViewController())
-        
-        //when
-        guard let  mockResponse = MockDataProvider.getEmployeeData()?.users?.first else{
+        // when
+        guard let  mockResponse = MockDataProvider.getEmployeeData()?.users?.first else {
             XCTFail("Failed on fetching data")
             return
         }
         let presenter = EmployeeDetailsPresenter(router: router, view: view, employeeDetails: mockResponse)
         presenter.updateEmployeeDetails()
-        
-        //Then
+        // Then
         let expectation = expectation(description: "testEmployeeDetailsPresenter")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             expectation.fulfill()

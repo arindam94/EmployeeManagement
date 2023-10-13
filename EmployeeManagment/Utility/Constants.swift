@@ -7,8 +7,8 @@
 
 import Foundation
 
- struct AppConstants{
-    static let employeeDetailsCellIdentifier = "EmployeeDetailsCell"
-    static let employeeListCellIdentifier = "EmployeeListCell"
-     static let employeeListCellHeight = 110
+ struct Constants {
+    static let detailsCellIdentifier = "EmployeeDetailsCell"
+    static let lististCellIdentifier = "EmployeeListCell"
+     static let employeeListCellHeight: CGFloat = 110
 }

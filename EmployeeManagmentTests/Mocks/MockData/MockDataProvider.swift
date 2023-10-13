@@ -12,11 +12,10 @@ final class MockDataProvider {
     static func getEmployeeData() -> EmployeeData? {
         guard let data = try?  TestUtils.dataValue(fromResource: "EmployeeDataRespone", ext: "json") else {return nil }
         debugPrint("data from json filer is - \(String(decoding: data, as: UTF8.self))")
-        do{
+        do {
             let employeeData = try JSONDecoder().decode(EmployeeData.self, from: data)
             return employeeData
-        }
-        catch let error{
+        } catch let error {
             debugPrint("error after decoding failed is -    \(error)")
             return nil
         }

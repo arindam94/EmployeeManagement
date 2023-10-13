@@ -10,24 +10,20 @@ import XCTest
 
 final class EmployeeDetailsConfigurationTests: XCTestCase {
     func testEmployeeListConfiguration() {
-        //Given
-        guard let employeeData = MockDataProvider.getEmployeeData()?.users?.first else{
+        // given
+        guard let employeeData = MockDataProvider.getEmployeeData()?.users?.first else {
             XCTFail("Failed on fetching data")
             return
         }
         let config = EmployeeDetailsConfigurator(employeeDetails: employeeData)
-        
-        //When
+        // when
         let viewController = config.configureViewController()
-        
-        //then
+        // then
         XCTAssertTrue(viewController.isKind(of: EmployeeDetailsViewController.self))
-        
-        if let viewController = viewController as? EmployeeDetailsViewController {
-            XCTAssertNotNil(viewController.interactor)
-        }
-        else{
+        guard let viewController = viewController as? EmployeeDetailsViewController else {
             XCTFail("Configuration issue of  EmployeeListViewController")
+            return
         }
+        XCTAssertNotNil( viewController.interactor)
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-//MARK: - EmployeeDeatilsPresenter Protocol
+// MARK: - EmployeeDeatilsPresenter Protocol
 protocol EmployeeDetailsPresenterInterface {
     func updateEmployeeDetails()
 }
@@ -16,16 +16,14 @@ struct EmployeeDetailsPresenter {
     private  var router: EmployeeDetailsRouter
     private weak var view: EmployeeDetailsViewDelegate?
     private var employeeDetails: EmployeeInfo
-    
     init(router: EmployeeDetailsRouter, view: EmployeeDetailsViewDelegate?, employeeDetails: EmployeeInfo) {
         self.router = router
         self.view = view
         self.employeeDetails = employeeDetails
     }
-    
 }
 
-//MARK: - EmployeeDeatilsPresenter Protocol Implementation
+// MARK: - EmployeeDeatilsPresenter Protocol Implementation
 extension EmployeeDetailsPresenter: EmployeeDetailsPresenterInterface {
     func updateEmployeeDetails() {
         view?.showEmployeeDetails(info: employeeDetails)

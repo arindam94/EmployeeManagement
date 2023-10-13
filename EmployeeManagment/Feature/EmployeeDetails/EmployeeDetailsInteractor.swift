@@ -19,7 +19,7 @@ struct EmployeeDetailsInteractor {
     }
 }
 
-//MARK: Interface Implementation
+// MARK: Interface Implementation
 extension EmployeeDetailsInteractor: EmployeeDetailsInteractorInterface {
     func showEmployeeData() {
         presenter.updateEmployeeDetails()

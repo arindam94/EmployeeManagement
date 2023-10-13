@@ -9,23 +9,18 @@ import XCTest
 @testable import EmployeeManagment
 
 final class EmployeeListConfigurationTests: XCTestCase {
-    
     func testEmployeeListConfiguration() {
-        //Given
+        // given
         let datsource = DataStore()
         let service = EmployeeService(httpClient: MockHTPClient())
         let config = EmployeeConfigurator(service: service, dataStore: datsource)
-        
-        //When
+        // when
         let viewController = config.configureViewController()
-        
-        //then
+        // then
         XCTAssertTrue(viewController.isKind(of: EmployeeListViewController.self))
-        
-        if let viewController = viewController as? EmployeeListViewController{
+        if let viewController = viewController as? EmployeeListViewController {
             XCTAssertNotNil(viewController.interactor)
-        }
-        else{
+        } else {
             XCTFail("Configuration issue of  EmployeeListViewController")
         }
     }

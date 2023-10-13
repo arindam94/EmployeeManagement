@@ -51,8 +51,8 @@
 		429E58992AD88BB30073448D /* MockEmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E58982AD88BB30073448D /* MockEmployeeListViewController.swift */; };
 		429E589B2AD88C8C0073448D /* MockEmployeeListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E589A2AD88C8C0073448D /* MockEmployeeListRouter.swift */; };
 		42C2AF562AD90E9B0030E15C /* MockEmployeeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2AF552AD90E9B0030E15C /* MockEmployeeInteractor.swift */; };
-		42C2AF582AD90EF10030E15C /* EmployeeListViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2AF572AD90EF10030E15C /* EmployeeListViewControllerSnapshotTests.swift */; };
-		42C2AF5B2AD911BA0030E15C /* EmployeeDetailsViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2AF5A2AD911BA0030E15C /* EmployeeDetailsViewControllerSnapshotTests.swift */; };
+		42C2AF582AD90EF10030E15C /* EmployeeListSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2AF572AD90EF10030E15C /* EmployeeListSnapshotTests.swift */; };
+		42C2AF5B2AD911BA0030E15C /* EmployeeDetailSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2AF5A2AD911BA0030E15C /* EmployeeDetailSnapshotTests.swift */; };
 		42E844172AD67B4400016FDD /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 42E844162AD67B4400016FDD /* iOSSnapshotTestCase */; };
 		42ED1C6D2AD5656800C80275 /* EmployeeTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED1C6C2AD5656800C80275 /* EmployeeTableUITests.swift */; };
 		42ED1C752AD584AE00C80275 /* EmployeeDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED1C742AD584AE00C80275 /* EmployeeDetailsInteractor.swift */; };
@@ -64,7 +64,6 @@
 		42ED1C822AD5861200C80275 /* EmployeeDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42ED1C802AD5861100C80275 /* EmployeeDetailsCell.xib */; };
 		42ED1C842AD59EED00C80275 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED1C832AD59EED00C80275 /* Company.swift */; };
 		42ED1C882AD5A8EB00C80275 /* EmployeeListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED1C872AD5A8EB00C80275 /* EmployeeListRouterTests.swift */; };
-		42ED1C8C2AD5C34F00C80275 /* EmployeeDetailsRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED1C8B2AD5C34F00C80275 /* EmployeeDetailsRouterTests.swift */; };
 		42ED1C8E2AD5C9A600C80275 /* EmployeeDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED1C8D2AD5C9A600C80275 /* EmployeeDetailsPresenterTests.swift */; };
 		42ED1C902AD5CEFF00C80275 /* EmployeeDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED1C8F2AD5CEFF00C80275 /* EmployeeDetailsInteractorTests.swift */; };
 		42ED1C922AD5D23400C80275 /* EmployeeDetailsConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED1C912AD5D23400C80275 /* EmployeeDetailsConfigurationTests.swift */; };
@@ -146,8 +145,8 @@
 		429E58982AD88BB30073448D /* MockEmployeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEmployeeListViewController.swift; sourceTree = "<group>"; };
 		429E589A2AD88C8C0073448D /* MockEmployeeListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEmployeeListRouter.swift; sourceTree = "<group>"; };
 		42C2AF552AD90E9B0030E15C /* MockEmployeeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEmployeeInteractor.swift; sourceTree = "<group>"; };
-		42C2AF572AD90EF10030E15C /* EmployeeListViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
-		42C2AF5A2AD911BA0030E15C /* EmployeeDetailsViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
+		42C2AF572AD90EF10030E15C /* EmployeeListSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListSnapshotTests.swift; sourceTree = "<group>"; };
+		42C2AF5A2AD911BA0030E15C /* EmployeeDetailSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailSnapshotTests.swift; sourceTree = "<group>"; };
 		42ED1C6C2AD5656800C80275 /* EmployeeTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableUITests.swift; sourceTree = "<group>"; };
 		42ED1C742AD584AE00C80275 /* EmployeeDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsInteractor.swift; sourceTree = "<group>"; };
 		42ED1C762AD584BC00C80275 /* EmployeeDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsPresenter.swift; sourceTree = "<group>"; };
@@ -158,7 +157,6 @@
 		42ED1C802AD5861100C80275 /* EmployeeDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeDetailsCell.xib; sourceTree = "<group>"; };
 		42ED1C832AD59EED00C80275 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		42ED1C872AD5A8EB00C80275 /* EmployeeListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListRouterTests.swift; sourceTree = "<group>"; };
-		42ED1C8B2AD5C34F00C80275 /* EmployeeDetailsRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsRouterTests.swift; sourceTree = "<group>"; };
 		42ED1C8D2AD5C9A600C80275 /* EmployeeDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsPresenterTests.swift; sourceTree = "<group>"; };
 		42ED1C8F2AD5CEFF00C80275 /* EmployeeDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsInteractorTests.swift; sourceTree = "<group>"; };
 		42ED1C912AD5D23400C80275 /* EmployeeDetailsConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsConfigurationTests.swift; sourceTree = "<group>"; };
@@ -431,7 +429,7 @@
 		42C2AF542AD90E560030E15C /* SnapshotTests */ = {
 			isa = PBXGroup;
 			children = (
-				42C2AF572AD90EF10030E15C /* EmployeeListViewControllerSnapshotTests.swift */,
+				42C2AF572AD90EF10030E15C /* EmployeeListSnapshotTests.swift */,
 			);
 			path = SnapshotTests;
 			sourceTree = "<group>";
@@ -439,7 +437,7 @@
 		42C2AF592AD90FCA0030E15C /* SnapshotTests */ = {
 			isa = PBXGroup;
 			children = (
-				42C2AF5A2AD911BA0030E15C /* EmployeeDetailsViewControllerSnapshotTests.swift */,
+				42C2AF5A2AD911BA0030E15C /* EmployeeDetailSnapshotTests.swift */,
 			);
 			path = SnapshotTests;
 			sourceTree = "<group>";
@@ -493,7 +491,6 @@
 			isa = PBXGroup;
 			children = (
 				42C2AF592AD90FCA0030E15C /* SnapshotTests */,
-				42ED1C8B2AD5C34F00C80275 /* EmployeeDetailsRouterTests.swift */,
 				42ED1C8D2AD5C9A600C80275 /* EmployeeDetailsPresenterTests.swift */,
 				42ED1C8F2AD5CEFF00C80275 /* EmployeeDetailsInteractorTests.swift */,
 				42ED1C912AD5D23400C80275 /* EmployeeDetailsConfigurationTests.swift */,
@@ -547,6 +544,7 @@
 				427001872ACFBD12000E7D02 /* Sources */,
 				427001882ACFBD12000E7D02 /* Frameworks */,
 				427001892ACFBD12000E7D02 /* Resources */,
+				42C2AF612AD917D50030E15C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -674,6 +672,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42C2AF612AD917D50030E15C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		427001872ACFBD12000E7D02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -734,11 +754,10 @@
 				426038BE2AD52E3700B802FC /* EmployeeCellTests.swift in Sources */,
 				429E58992AD88BB30073448D /* MockEmployeeListViewController.swift in Sources */,
 				42ED1C8E2AD5C9A600C80275 /* EmployeeDetailsPresenterTests.swift in Sources */,
-				42C2AF5B2AD911BA0030E15C /* EmployeeDetailsViewControllerSnapshotTests.swift in Sources */,
-				42ED1C8C2AD5C34F00C80275 /* EmployeeDetailsRouterTests.swift in Sources */,
+				42C2AF5B2AD911BA0030E15C /* EmployeeDetailSnapshotTests.swift in Sources */,
 				427002362AD3B70B000E7D02 /* DataStoreTests.swift in Sources */,
 				427002382AD3B7CE000E7D02 /* MockDataProvider.swift in Sources */,
-				42C2AF582AD90EF10030E15C /* EmployeeListViewControllerSnapshotTests.swift in Sources */,
+				42C2AF582AD90EF10030E15C /* EmployeeListSnapshotTests.swift in Sources */,
 				42ED1C922AD5D23400C80275 /* EmployeeDetailsConfigurationTests.swift in Sources */,
 				42ED1C882AD5A8EB00C80275 /* EmployeeListRouterTests.swift in Sources */,
 				42C2AF562AD90E9B0030E15C /* MockEmployeeInteractor.swift in Sources */,
@@ -831,7 +850,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -894,7 +913,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
