@@ -43,6 +43,16 @@
 		427002362AD3B70B000E7D02 /* DataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427002352AD3B70B000E7D02 /* DataStoreTests.swift */; };
 		427002382AD3B7CE000E7D02 /* MockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427002372AD3B7CE000E7D02 /* MockDataProvider.swift */; };
 		4270023A2AD3B83E000E7D02 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427002392AD3B83E000E7D02 /* TestUtils.swift */; };
+		429E588C2AD878E80073448D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E588B2AD878E80073448D /* Constants.swift */; };
+		429E58902AD884C30073448D /* MockEmployeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E588F2AD884C30073448D /* MockEmployeeDetailsViewController.swift */; };
+		429E58922AD8851A0073448D /* MockEmployeeDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E58912AD8851A0073448D /* MockEmployeeDetailsPresenter.swift */; };
+		429E58942AD8859E0073448D /* MockEmployeeDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E58932AD8859E0073448D /* MockEmployeeDetailsInteractor.swift */; };
+		429E58972AD88B570073448D /* MockEmployeePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E58962AD88B570073448D /* MockEmployeePresenter.swift */; };
+		429E58992AD88BB30073448D /* MockEmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E58982AD88BB30073448D /* MockEmployeeListViewController.swift */; };
+		429E589B2AD88C8C0073448D /* MockEmployeeListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E589A2AD88C8C0073448D /* MockEmployeeListRouter.swift */; };
+		42C2AF562AD90E9B0030E15C /* MockEmployeeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2AF552AD90E9B0030E15C /* MockEmployeeInteractor.swift */; };
+		42C2AF582AD90EF10030E15C /* EmployeeListViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2AF572AD90EF10030E15C /* EmployeeListViewControllerSnapshotTests.swift */; };
+		42C2AF5B2AD911BA0030E15C /* EmployeeDetailsViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2AF5A2AD911BA0030E15C /* EmployeeDetailsViewControllerSnapshotTests.swift */; };
 		42E844172AD67B4400016FDD /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 42E844162AD67B4400016FDD /* iOSSnapshotTestCase */; };
 		42ED1C6D2AD5656800C80275 /* EmployeeTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED1C6C2AD5656800C80275 /* EmployeeTableUITests.swift */; };
 		42ED1C752AD584AE00C80275 /* EmployeeDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED1C742AD584AE00C80275 /* EmployeeDetailsInteractor.swift */; };
@@ -128,6 +138,16 @@
 		427002352AD3B70B000E7D02 /* DataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreTests.swift; sourceTree = "<group>"; };
 		427002372AD3B7CE000E7D02 /* MockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataProvider.swift; sourceTree = "<group>"; };
 		427002392AD3B83E000E7D02 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
+		429E588B2AD878E80073448D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		429E588F2AD884C30073448D /* MockEmployeeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEmployeeDetailsViewController.swift; sourceTree = "<group>"; };
+		429E58912AD8851A0073448D /* MockEmployeeDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEmployeeDetailsPresenter.swift; sourceTree = "<group>"; };
+		429E58932AD8859E0073448D /* MockEmployeeDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEmployeeDetailsInteractor.swift; sourceTree = "<group>"; };
+		429E58962AD88B570073448D /* MockEmployeePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEmployeePresenter.swift; sourceTree = "<group>"; };
+		429E58982AD88BB30073448D /* MockEmployeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEmployeeListViewController.swift; sourceTree = "<group>"; };
+		429E589A2AD88C8C0073448D /* MockEmployeeListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEmployeeListRouter.swift; sourceTree = "<group>"; };
+		42C2AF552AD90E9B0030E15C /* MockEmployeeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEmployeeInteractor.swift; sourceTree = "<group>"; };
+		42C2AF572AD90EF10030E15C /* EmployeeListViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
+		42C2AF5A2AD911BA0030E15C /* EmployeeDetailsViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
 		42ED1C6C2AD5656800C80275 /* EmployeeTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableUITests.swift; sourceTree = "<group>"; };
 		42ED1C742AD584AE00C80275 /* EmployeeDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsInteractor.swift; sourceTree = "<group>"; };
 		42ED1C762AD584BC00C80275 /* EmployeeDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsPresenter.swift; sourceTree = "<group>"; };
@@ -230,7 +250,7 @@
 		427001A42ACFBD13000E7D02 /* EmployeeManagmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				427002372AD3B7CE000E7D02 /* MockDataProvider.swift */,
+				429E588E2AD882C00073448D /* Mocks */,
 				426038C32AD53EDE00B802FC /* Utility */,
 				42EED36E2AD3FC82008666B0 /* Feature */,
 				42EED36B2AD3F7F4008666B0 /* Model */,
@@ -309,6 +329,7 @@
 			children = (
 				427001CA2ACFC751000E7D02 /* LocalizationKeys.swift */,
 				4270021F2AD26FFC000E7D02 /* StoryboardIdentifier.swift */,
+				429E588B2AD878E80073448D /* Constants.swift */,
 				427002392AD3B83E000E7D02 /* TestUtils.swift */,
 			);
 			path = Utility;
@@ -368,6 +389,61 @@
 			path = DataStore;
 			sourceTree = "<group>";
 		};
+		429E588D2AD8819F0073448D /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				427002372AD3B7CE000E7D02 /* MockDataProvider.swift */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		429E588E2AD882C00073448D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				429E589C2AD88CC70073448D /* EmployeeList */,
+				429E58952AD885F60073448D /* EmployeeDetails */,
+				429E588D2AD8819F0073448D /* MockData */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		429E58952AD885F60073448D /* EmployeeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				429E588F2AD884C30073448D /* MockEmployeeDetailsViewController.swift */,
+				429E58912AD8851A0073448D /* MockEmployeeDetailsPresenter.swift */,
+				429E58932AD8859E0073448D /* MockEmployeeDetailsInteractor.swift */,
+			);
+			path = EmployeeDetails;
+			sourceTree = "<group>";
+		};
+		429E589C2AD88CC70073448D /* EmployeeList */ = {
+			isa = PBXGroup;
+			children = (
+				429E58962AD88B570073448D /* MockEmployeePresenter.swift */,
+				429E58982AD88BB30073448D /* MockEmployeeListViewController.swift */,
+				429E589A2AD88C8C0073448D /* MockEmployeeListRouter.swift */,
+				42C2AF552AD90E9B0030E15C /* MockEmployeeInteractor.swift */,
+			);
+			path = EmployeeList;
+			sourceTree = "<group>";
+		};
+		42C2AF542AD90E560030E15C /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				42C2AF572AD90EF10030E15C /* EmployeeListViewControllerSnapshotTests.swift */,
+			);
+			path = SnapshotTests;
+			sourceTree = "<group>";
+		};
+		42C2AF592AD90FCA0030E15C /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				42C2AF5A2AD911BA0030E15C /* EmployeeDetailsViewControllerSnapshotTests.swift */,
+			);
+			path = SnapshotTests;
+			sourceTree = "<group>";
+		};
 		42ED1C6B2AD5654D00C80275 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +478,7 @@
 		42ED1C892AD5C30900C80275 /* EmployeeList */ = {
 			isa = PBXGroup;
 			children = (
+				42C2AF542AD90E560030E15C /* SnapshotTests */,
 				42ED1C872AD5A8EB00C80275 /* EmployeeListRouterTests.swift */,
 				42EED3702AD3FCD5008666B0 /* EmployeeListConfigurationTests.swift */,
 				42EED3722AD3FF5F008666B0 /* EmployeeListPresenterTests.swift */,
@@ -415,6 +492,7 @@
 		42ED1C8A2AD5C31000C80275 /* EmployeeDetails */ = {
 			isa = PBXGroup;
 			children = (
+				42C2AF592AD90FCA0030E15C /* SnapshotTests */,
 				42ED1C8B2AD5C34F00C80275 /* EmployeeDetailsRouterTests.swift */,
 				42ED1C8D2AD5C9A600C80275 /* EmployeeDetailsPresenterTests.swift */,
 				42ED1C8F2AD5CEFF00C80275 /* EmployeeDetailsInteractorTests.swift */,
@@ -624,6 +702,7 @@
 				427001932ACFBD12000E7D02 /* EmployeeListViewController.swift in Sources */,
 				427001E22ACFE4FD000E7D02 /* HTTPClient.swift in Sources */,
 				42ED1C7E2AD5850D00C80275 /* EmployeeDetailsViewController.swift in Sources */,
+				429E588C2AD878E80073448D /* Constants.swift in Sources */,
 				427001C62ACFC59C000E7D02 /* ResponseError.swift in Sources */,
 				4270018F2ACFBD12000E7D02 /* AppDelegate.swift in Sources */,
 				42ED1C772AD584BC00C80275 /* EmployeeDetailsPresenter.swift in Sources */,
@@ -643,20 +722,29 @@
 				42ED1C902AD5CEFF00C80275 /* EmployeeDetailsInteractorTests.swift in Sources */,
 				42ED1C942AD5D51400C80275 /* EmployeeDetailsViewControllerTests.swift in Sources */,
 				42EED3752AD40520008666B0 /* EmployeeInteractorTests.swift in Sources */,
+				429E58942AD8859E0073448D /* MockEmployeeDetailsInteractor.swift in Sources */,
 				426038C52AD53F0600B802FC /* StoryboardIdentifierTests.swift in Sources */,
 				42EED3652AD3D5C3008666B0 /* NetworkRequestTest.swift in Sources */,
+				429E58922AD8851A0073448D /* MockEmployeeDetailsPresenter.swift in Sources */,
+				429E589B2AD88C8C0073448D /* MockEmployeeListRouter.swift in Sources */,
 				42EED3732AD3FF5F008666B0 /* EmployeeListPresenterTests.swift in Sources */,
 				42EED36D2AD3F843008666B0 /* TestEmployeeData.swift in Sources */,
+				429E58972AD88B570073448D /* MockEmployeePresenter.swift in Sources */,
 				42EED3682AD3D8AA008666B0 /* EmployeeListServiceTest.swift in Sources */,
 				426038BE2AD52E3700B802FC /* EmployeeCellTests.swift in Sources */,
+				429E58992AD88BB30073448D /* MockEmployeeListViewController.swift in Sources */,
 				42ED1C8E2AD5C9A600C80275 /* EmployeeDetailsPresenterTests.swift in Sources */,
+				42C2AF5B2AD911BA0030E15C /* EmployeeDetailsViewControllerSnapshotTests.swift in Sources */,
 				42ED1C8C2AD5C34F00C80275 /* EmployeeDetailsRouterTests.swift in Sources */,
 				427002362AD3B70B000E7D02 /* DataStoreTests.swift in Sources */,
 				427002382AD3B7CE000E7D02 /* MockDataProvider.swift in Sources */,
+				42C2AF582AD90EF10030E15C /* EmployeeListViewControllerSnapshotTests.swift in Sources */,
 				42ED1C922AD5D23400C80275 /* EmployeeDetailsConfigurationTests.swift in Sources */,
 				42ED1C882AD5A8EB00C80275 /* EmployeeListRouterTests.swift in Sources */,
+				42C2AF562AD90E9B0030E15C /* MockEmployeeInteractor.swift in Sources */,
 				42EED3712AD3FCD5008666B0 /* EmployeeListConfigurationTests.swift in Sources */,
 				42EED3632AD3D20C008666B0 /* ResponeErrorTests.swift in Sources */,
+				429E58902AD884C30073448D /* MockEmployeeDetailsViewController.swift in Sources */,
 				42ED1C962AD5D83000C80275 /* EmployeeDetailsCellTests.swift in Sources */,
 				426038BC2AD5253D00B802FC /* EmployeeListViewControllerTestes.swift in Sources */,
 			);

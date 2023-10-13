@@ -8,14 +8,6 @@
 import XCTest
 @testable import EmployeeManagment
 
-private final  class MockEmployeeDetailsPresenter: EmployeeDetailsPresenterInterface {
-    var updateEmployeeDetailsExecuted: Bool = false
-    func updateEmployeeDetails() {
-        updateEmployeeDetailsExecuted = true
-    }
-}
-
-
 final class EmployeeDetailsInteractorTests: XCTestCase {
     
     func testEmployeeListInteractor() {

@@ -8,7 +8,6 @@
 import XCTest
 @testable import EmployeeManagment
 
-
 final class MockDataProvider {
     static func getEmployeeData() -> EmployeeData? {
         guard let data = try?  TestUtils.dataValue(fromResource: "EmployeeDataRespone", ext: "json") else {return nil }

@@ -15,9 +15,9 @@ protocol EmployeePresenterInterface {
 }
 
 struct EmployeePresenter {
-    private weak var view: EmployeeListViewInterface?
+    private weak var view: EmployeeListViewDelegate?
     private var router:  EmployeeListRouting
-    init(view: EmployeeListViewInterface? = nil, router: EmployeeListRouting) {
+    init(view: EmployeeListViewDelegate? = nil, router: EmployeeListRouting) {
         self.view = view
         self.router = router
     }

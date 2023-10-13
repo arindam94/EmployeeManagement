@@ -8,29 +8,13 @@
 import XCTest
 @testable import EmployeeManagment
 
-private final class MockEmployeePresenter: EmployeePresenterInterface {
-    func showEmployeeDetails(info: EmployeeManagment.EmployeeInfo) {
-    }
-    
-    var showErroAlertExecuted: Bool = false
-    var showEmployeeLisExecutedt: Bool = false
-    func employeeListUpdate(list: EmployeeData) {
-        showEmployeeLisExecutedt = true
-    }
-    
-    func employeeRequestFailed(description: String) {
-        showErroAlertExecuted = true
-    }
-}
-
-
 final class EmployeeInteractorTests: XCTestCase {
     
     func testEmployeeListInteractor(){
         //Given
         let serrvice = EmployeeService(httpClient: MockHTPClient())
         let presenter = MockEmployeePresenter()
-        let interactor = EmployeeInteractor(service: serrvice, presentter: presenter, datsStore: DataStore())
+        let interactor = EmployeeInteractor(service: serrvice, presenter: presenter, dataStore: DataStore())
         
         //When
         interactor.getListofEmployee()

@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol EmployeeDetailsViewInterface: AnyObject {
+protocol EmployeeDetailsViewDelegate: AnyObject {
     func showEmployeeDetails(info: EmployeeInfo)
 }
 
 final class EmployeeDetailsViewController: UIViewController {
     @IBOutlet weak private var employeeDetailsTableView: UITableView!
     
-    var employeeData: EmployeeInfo?
+    private var employeeData: EmployeeInfo?
     var interactor: EmployeeDetailsInteractorInterface?
     
     override func viewDidLoad() {
@@ -36,21 +36,28 @@ final class EmployeeDetailsViewController: UIViewController {
     
 }
 
-extension EmployeeDetailsViewController: EmployeeDetailsViewInterface, UITableViewDataSource, UITableViewDelegate {
+//MARK: - EmployeeDetailsViewDelegate Protocol Implementation
+extension EmployeeDetailsViewController: EmployeeDetailsViewDelegate {
+    func showEmployeeDetails(info: EmployeeInfo) {
+        DispatchQueue.main.async {
+            self.employeeData = info
+            self.employeeDetailsTableView.reloadData()
+        }
+    }
+}
+
+extension EmployeeDetailsViewController:  UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeeDetailsCell") as! EmployeeDetailsCell
-        cell.employeeDetails = self.employeeData
-        return cell
-    }
-    
-    func showEmployeeDetails(info: EmployeeInfo) {
-        DispatchQueue.main.async {
-            self.employeeData = info
-            self.employeeDetailsTableView.reloadData()
+        if  let cell = tableView.dequeueReusableCell(withIdentifier: AppConstants.employeeDetailsCellIdentifier) as? EmployeeDetailsCell {
+            cell.employeeDetails = self.employeeData
+            return cell
+        }
+        else {
+            return UITableViewCell()
         }
     }
 }

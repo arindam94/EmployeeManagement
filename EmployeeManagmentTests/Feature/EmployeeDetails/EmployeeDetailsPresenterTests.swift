@@ -8,15 +8,6 @@
 import XCTest
 @testable import EmployeeManagment
 
-final class MockEmployeeDetailsViewController:EmployeeDetailsViewInterface {
-    var showEmployeeDetailsExecuted: Bool = false
-    
-    func showEmployeeDetails(info: EmployeeManagment.EmployeeInfo) {
-        showEmployeeDetailsExecuted = true
-    }
-}
-
-
 final class EmployeeDetailsPresenterTests: XCTestCase {
     
     func testEmployeeDetailsPresenter() {

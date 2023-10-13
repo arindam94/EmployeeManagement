@@ -1,8 +1,8 @@
 //
-//  EmployeeDetailsViewControllerTests.swift
+//  EmployeeDetailsViewControllerSnapshotTests.swift
 //  EmployeeManagmentTests
 //
-//  Created by Arindam Santra on 11/10/23.
+//  Created by Arindam Santra on 13/10/23.
 //
 
 import XCTest
@@ -10,8 +10,7 @@ import iOSSnapshotTestCase
 import iOSSnapshotTestCaseCore
 @testable import EmployeeManagment
 
-final class EmployeeDetailsViewControllerTests: FBSnapshotTestCase {
-    
+final class EmployeeDetailsViewControllerSnapshotTests: FBSnapshotTestCase {
     var employeeDetailsViewController: EmployeeDetailsViewController!
     var navigationController: UINavigationController!
     var sceneDelegate: SceneDelegate!
@@ -27,21 +26,6 @@ final class EmployeeDetailsViewControllerTests: FBSnapshotTestCase {
         sceneDelegate                            = nil
     }
     
-    func testEmployeeDataListViewControllerDataLoading(){
-        //Given
-        let viewController: EmployeeDetailsViewController = UIStoryboard.instantiate(identifier: .employeeDetails)
-        let interactor = MockEmployeeDetailsInteractor()
-        viewController.interactor = interactor
-        
-        //When
-        viewController.viewWillAppear(true)
-        
-        //then
-        XCTAssertTrue(interactor.showEmployeeDataExecuted)
-    }
-    
-    
-    
     func testEmployeeListViewControlleWithNoResult() throws {
         loadViewController()
         let expectation = expectation(description: "Employeelist DetailsviewController")
@@ -51,7 +35,6 @@ final class EmployeeDetailsViewControllerTests: FBSnapshotTestCase {
         }
         wait(for: [expectation], timeout: 2.0)
     }
-    
     
     private func loadViewController() {
         guard let employeeInfo = MockDataProvider.getEmployeeData()?.users?.first else{
@@ -71,5 +54,4 @@ final class EmployeeDetailsViewControllerTests: FBSnapshotTestCase {
         navigationController = UINavigationController(rootViewController: viewController)
         self.sceneDelegate.window?.rootViewController = navigationController
     }
-    
 }

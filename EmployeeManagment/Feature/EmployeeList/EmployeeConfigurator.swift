@@ -1,5 +1,5 @@
 //
-//  EmployeeCinfigurator.swift
+//  EmployeeConfigurator.swift
 //  EmployeeManagment
 //
 //  Created by Arindam Santra on 08/10/23.
@@ -29,7 +29,7 @@ extension EmployeeConfigurator: Configurator {
         let viewController : EmployeeListViewController = UIStoryboard.instantiate(identifier: .employeeList)
         let router = EmployeeRouter(viewController: viewController)
         let presenter = EmployeePresenter(view: viewController, router: router)
-        let interactor = EmployeeInteractor(service: service, presentter: presenter, datsStore: dataStore)
+        let interactor = EmployeeInteractor(service: service, presenter: presenter, dataStore: dataStore)
         viewController.interactor = interactor
         return viewController
     }

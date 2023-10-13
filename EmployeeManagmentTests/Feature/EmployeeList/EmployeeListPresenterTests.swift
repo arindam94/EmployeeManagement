@@ -8,36 +8,12 @@
 import XCTest
 @testable import EmployeeManagment
 
-final  class MockEmployeeListViewController:EmployeeListViewInterface {
-    var showErrorAlert: Bool = false
-    var showEmployeeList: Bool = false
-    
-    func showListOfEmployee(list: EmployeeData) {
-        showEmployeeList = true
-    }
-    
-    func showError(errorMessage: String) {
-        showErrorAlert = true
-    }
-}
-
-final class MockEmployeeListRouter: EmployeeListRouting {
-    var showEmployeeDetailsExecuted: Bool = false
-    func showEmployeeDetails(employeeData: EmployeeManagment.EmployeeInfo) {
-        showEmployeeDetailsExecuted = true
-    }
-}
-
-
-
 final class EmployeeListPresenterTests: XCTestCase {
-    
     func testEmployeeListPresenter() {
         //given
         let view = MockEmployeeListViewController()
         let router = MockEmployeeListRouter()
         let presenter = EmployeePresenter(view: view, router: router)
-        
         
         //when
         guard let  mockResponse = MockDataProvider.getEmployeeData() else{
@@ -45,7 +21,6 @@ final class EmployeeListPresenterTests: XCTestCase {
             return
         }
         presenter.employeeListUpdate(list: mockResponse )
-        
         
         //Then
         let expectation = expectation(description: "testEmployeePresenter")
@@ -64,10 +39,8 @@ final class EmployeeListPresenterTests: XCTestCase {
         let router = MockEmployeeListRouter()
         let presenter = EmployeePresenter(view: view, router: router)
         
-        
         //when
         presenter.employeeRequestFailed(description: "Error ")
-        
         
         //Then
         let expectation = expectation(description: "testEmployeePresenter")

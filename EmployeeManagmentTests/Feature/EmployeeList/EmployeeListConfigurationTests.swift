@@ -10,7 +10,6 @@ import XCTest
 
 final class EmployeeListConfigurationTests: XCTestCase {
     
-    
     func testEmployeeListConfiguration() {
         //Given
         let datsource = DataStore()

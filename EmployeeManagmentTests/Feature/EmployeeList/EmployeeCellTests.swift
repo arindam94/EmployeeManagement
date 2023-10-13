@@ -10,7 +10,7 @@ import XCTest
 
 final class EmployeeCellTests: XCTestCase {
     func testEmployeeCell(){
-        let nib = UINib(nibName: "EmployeeListCell", bundle: Bundle(for: EmployeeListCell.self))
+        let nib = UINib(nibName: AppConstants.employeeListCellIdentifier, bundle: Bundle(for: EmployeeListCell.self))
         if let cell = nib.instantiate(withOwner: self, options: nil).first as? EmployeeListCell{
             if let employeeData = MockDataProvider.getEmployeeData()?.users?.first{
                 cell.employeeDetails = employeeData

@@ -8,7 +8,6 @@
 import XCTest
 @testable import EmployeeManagment
 
-
 final class EmployeeDetailsConfigurationTests: XCTestCase {
     func testEmployeeListConfiguration() {
         //Given

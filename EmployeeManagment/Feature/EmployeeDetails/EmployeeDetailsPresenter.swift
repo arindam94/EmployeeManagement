@@ -14,10 +14,10 @@ protocol EmployeeDetailsPresenterInterface {
 
 struct EmployeeDetailsPresenter {
     private  var router: EmployeeDetailsRouter
-    private weak var view: EmployeeDetailsViewInterface?
+    private weak var view: EmployeeDetailsViewDelegate?
     private var employeeDetails: EmployeeInfo
     
-    init(router: EmployeeDetailsRouter, view: EmployeeDetailsViewInterface?, employeeDetails: EmployeeInfo) {
+    init(router: EmployeeDetailsRouter, view: EmployeeDetailsViewDelegate?, employeeDetails: EmployeeInfo) {
         self.router = router
         self.view = view
         self.employeeDetails = employeeDetails

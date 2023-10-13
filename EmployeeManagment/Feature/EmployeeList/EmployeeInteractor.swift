@@ -15,20 +15,20 @@ protocol EmployeeListInteractor {
 
 struct EmployeeInteractor {
     private let service: EmployeeService
-    private let presentter: EmployeePresenterInterface
-    private let datsStore: Dataprovider
+    private let presenter: EmployeePresenterInterface
+    private let dataStore: Dataprovider
     
-    init(service: EmployeeService, presentter: EmployeePresenterInterface, datsStore: Dataprovider) {
+    init(service: EmployeeService, presenter: EmployeePresenterInterface, dataStore: Dataprovider) {
         self.service = service
-        self.presentter = presentter
-        self.datsStore = datsStore
+        self.presenter = presenter
+        self.dataStore = dataStore
     }
     
 }
 extension EmployeeInteractor: EmployeeListInteractor {
     func showEmployeeDetails(index: Int) {
-        if let employeeInfo = datsStore.employeeDataAt(index: index){
-            presentter.showEmployeeDetails(info: employeeInfo)
+        if let employeeInfo = dataStore.employeeDataAt(index: index){
+            presenter.showEmployeeDetails(info: employeeInfo)
         }
     }
     
@@ -36,12 +36,12 @@ extension EmployeeInteractor: EmployeeListInteractor {
         Task{
             do{
                 if  let listData =  try await service.fetchEmployeeData(){
-                    datsStore.addEmployeedata(dataValue: listData)
-                    presentter.employeeListUpdate(list: listData)
+                    dataStore.addEmployeedata(dataValue: listData)
+                    presenter.employeeListUpdate(list: listData)
                 }
             }
             catch let error as ResponseError {
-                presentter.employeeRequestFailed(description: error.errorDescription)
+                presenter.employeeRequestFailed(description: error.errorDescription)
             }
         }
     }
