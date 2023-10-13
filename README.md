@@ -11,6 +11,7 @@ https://github.com/arindam94/EmployeeManagement/assets/30508758/dc43a535-02d4-4f
 ## Application Features
 * Clean Architecture
 * API Integration
+* SwiftLint- For maintaining coding standards
 * Localization
 
 ## API Integration
@@ -24,8 +25,8 @@ https://github.com/arindam94/EmployeeManagement/assets/30508758/dc43a535-02d4-4f
 
   
 ## Unit Testing and code coverage
-* EmployeeManagement has 91% of code coverage, including Unit testing and UI testing. UI testing is covered by- iOSSnapshotTestCase
-<img width="1435" alt="ss-code" src="https://github.com/arindam94/EmployeeManagement/assets/30508758/f7ff1eaf-a245-4bcf-908b-0a961a4ae8ec">
+* EmployeeManagement has 90% of code coverage, including Unit testing and UI testing. UI testing is covered by- iOSSnapshotTestCase
+<img width="1437" alt="Screenshot 2023-10-13 at 4 10 47 PM" src="https://github.com/arindam94/EmployeeManagement/assets/30508758/eb1849d1-9a81-4938-8ebe-428064547670">
 
 
 
